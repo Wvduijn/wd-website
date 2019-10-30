@@ -6,7 +6,8 @@
 
 module.exports = {
   siteName: 'Netlify CMS Gridsome starter template',
-  siteDescription: 'A simple, hackable & minimalistic starter for Gridsome that uses Netlify CMS for content.',
+  siteDescription:
+    'A simple, hackable & minimalistic starter for Gridsome that uses Netlify CMS for content.',
 
   templates: {
     Post: '/:title',
@@ -28,6 +29,12 @@ module.exports = {
           }
         }
       }
+    },
+    {
+      use: `gridsome-plugin-netlify-cms`,
+      options: {
+        publicPath: `/admin`
+      }
     }
   ],
 
@@ -37,9 +44,7 @@ module.exports = {
       externalLinksTarget: '_blank',
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
       anchorClassName: 'icon icon-link',
-      plugins: [
-        '@gridsome/remark-prismjs'
-      ]
+      plugins: ['@gridsome/remark-prismjs']
     }
   }
-}
+};
