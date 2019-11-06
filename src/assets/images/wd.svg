@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 250 125" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Logo single</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="0%" x2="1.11022302e-14%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#EE751C" offset="0%"></stop>
+            <stop stop-color="#E63020" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-1.11022302e-14%" y1="39.450791%" x2="94.24375%" y2="60.549209%" id="linearGradient-2">
+            <stop stop-color="#E63020" offset="0%"></stop>
+            <stop stop-color="#EE751C" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Logo-single" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(11.000000, 14.000000)">
+            <circle id="Oval" fill="url(#linearGradient-1)" cx="218.5" cy="86.5" r="9.5"></circle>
+            <path d="M158.399182,0 C189.697236,0 209,20.0228571 209,48 C209,75.9771429 189.421482,96 158.399182,96 L129.858667,96 L129.858667,49.6457143 L142.956971,49.6457143 L142.956971,82.8342857 L158.261305,82.8342857 C180.873115,82.8342857 195.488065,69.3942857 195.488065,48 C195.488065,26.6057143 181.424623,13.0285714 158.399182,13.0285714 L130.21,13.028 L96.9538656,96 L84.1278208,96 L67.716,57.0514286 L51.3041792,96 L38.4781344,96 L0,0 L14.0672749,0 L44.822,76.387 L60.5444481,40.0457143 L43.7188839,0 L57.7861589,0 L67.716,23.3142857 L77.7837556,0 L91.7131161,0 L74.8875519,39.9085714 L90.609,76.387 L121.50264,0 L135.432,0 L158.399182,0 Z" id="Combined-Shape" fill="url(#linearGradient-2)" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

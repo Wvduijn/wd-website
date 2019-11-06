@@ -32,7 +32,7 @@ export default {
 .post-card {
   margin-bottom: var(--space);
   position: relative;
-
+  font-family: 'Roboto', sans-serif;
   &__header {
     margin-left: calc(var(--space) * -1);
     margin-right: calc(var(--space) * -1);

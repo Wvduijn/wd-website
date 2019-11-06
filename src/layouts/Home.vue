@@ -1,23 +1,17 @@
 <template>
   <div id="app">
-    
+    <Navigation />
     <header class="header justify-between">
 
       <div class="header__left">
         <Logo v-if="showLogo" />
       </div>
-      <div class="flex justify-end ml-auto">
-        <Navigation />
-      </div>
-      <!-- <div class="flex justify-end ml-auto">
-        <a class="text-white-700 text-center text-sm px-4 py-2 m-2">BLOG</a>
-        <a class="text-white-700 text-center text-sm px-4 py-2 m-2">CONTACT</a>   
-      </div> -->
       <div class="header__right ml-20">
         <ToggleTheme />
       </div>
     </header>
     <Hero />
+    <Section />
     <transition
       name="fade"
       appear
@@ -39,19 +33,21 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
-import ToggleTheme from '~/components/ToggleTheme.vue'
 import Hero from '~/components/Hero.vue'
+import Section from '~/components/section/Section.vue'
 import Navigation from '~/components/navigation/Navigation.vue'
 
+import ToggleTheme from '~/components/ToggleTheme.vue'
 
 export default {
   props: {
     showLogo: { default: true }
   },
   components: {
+    Hero,
     Logo,
     ToggleTheme,
-    Hero,
+    Section,
     Navigation
   }
 }
@@ -90,6 +86,7 @@ export default {
 
 .main {
   margin: 0 auto;
+  padding: 1.5vw 15px 0;
 }
 
 .footer {
