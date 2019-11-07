@@ -1,21 +1,41 @@
 <template>
     <fragment>
-    <div class="nav-icon menu-toggle">
+        <div id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>  
+    <div class="nav-icon menu-toggle" @click="toggleMenu">
         <div></div>
     </div>
+    <div :class="{'open': this.open}" >  
     <nav>
         <ul class="menu">
             <li data-text="Home">Home</li>
             <li data-text="Projects">Blog</li>
             <li data-text="Contact">Contact</li>
         </ul>
-    </nav> 
+    </nav>
+    </div> 
     </fragment>
 </template>
 <script>
 export default {
     // toggle open class whenever menu button is clicked
     // Component should receive this prop
+    data() {
+    return {
+      open: false
+    }
+  },
+    methods: {
+        toggleMenu(){
+            this.open = !this.open
+            console.log('clicked');
+            console.log('Opened', this.open);
+        }
+    }
 }
 </script>
 <style lang="scss" scoped>
@@ -24,7 +44,7 @@ $bp-arrow: 700px;
 $font-primary: 'Roboto', sans-serif;
 $color: #006e90;
 $color-bg: #ee751c;
-$color-dark: darken($color, 10%);
+$color-dark: darken($color-bg, 10%);
 $color-lite: lighten($color, 10%);
 
 @mixin position-center {
@@ -43,12 +63,53 @@ ul {
     font-size: 48px;
   }
 }
+/* Icon 3 */
 
+#nav-icon3 span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
+  top: 18px;
+}
+
+#nav-icon3 span:nth-child(4) {
+  top: 36px;
+}
+
+#nav-icon3.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+#nav-icon3.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#nav-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#nav-icon3.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+/* END Icon 3 */
 .nav-icon {
   width: 25px;
   position: fixed;
   top: 23px;
   right: 75px;
+  cursor: pointer;
+  z-index: 900;
 }
 
 .nav-icon:after, 
