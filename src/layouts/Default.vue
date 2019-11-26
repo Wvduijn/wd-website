@@ -7,14 +7,11 @@
         <Logo v-if="showLogo" />
       </div>
       <div class="flex justify-end ml-auto">
-        <Navigation />
+       
       </div>
-      <!-- <div class="flex justify-end ml-auto">
-        <a class="text-white-700 text-center text-sm px-4 py-2 m-2">BLOG</a>
-        <a class="text-white-700 text-center text-sm px-4 py-2 m-2">CONTACT</a>   
-      </div> -->
       <div class="header__right ml-20">
-        <ToggleTheme />
+         <Navigation />
+         <ToggleTheme />
       </div>
     </header>
     <Hero />
@@ -30,8 +27,8 @@
     </transition>
 
     <footer class="footer">
-      <span class="footer__copyright">Copyright © {{ new Date().getFullYear() }}. </span>
-      <span class="footer__links">Powered by <a href="//www.suits.at"> SUITS </a></span>
+      <span class="footer__copyright">Copyright © {{ new Date().getFullYear() }}. WD. </span>
+      <span class="footer__links">Powered by <a href="#"> Me </a></span>
     </footer>
 
   </div>

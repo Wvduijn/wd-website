@@ -3,11 +3,12 @@
 /**/ const context = canvas.getContext('2d');
 /**/ let windowWidth = (canvas.width = window.innerWidth);
 /**/ let windowHeight = (canvas.height = window.innerHeight);
-let element = document.querySelector('.void-animation');
+let element = document.querySelector('.wd-void-animation');
 /**/ canvas.id = 'canvas';
-/**/ element.append(
-  canvas
-); /* ---- CORE END ---- */ /* ---- CREATING ZONE ---- */ /* ---- SETTINGS ---- */
+/**/ element.append(canvas);
+/* ---- CORE END ---- */
+/* ---- SETTINGS ---- */
+
 /**/ const numberParticlesStart = 250;
 const particleSpeed = 0.3;
 const velocity = 0.9;
@@ -17,6 +18,8 @@ const highlight = new Array(
   Math.round(Math.random() * 255),
   Math.round(Math.random() * 255)
 );
+
+/* ---- CREATING ZONE ---- */
 
 /* ---- INIT ---- */
 let particles = [];

@@ -1,23 +1,33 @@
 <template>
-    <!--Hero-->
-    <div class="void-animation w-screen h-screen">
-    <div class="logos">
-        <g-image src="~/assets/images/wd.svg" class="logo"/>
+  <!--Hero-->
+  <div class="wd-void-animation w-screen h-screen">
+    <div class="wd-logo">
+      <g-image
+        src="~/assets/images/wd.svg"
+        class="logo"
+      />
     </div>
     <div class="py-20 absolute-center">
-            <div class="parent">
-            <div class="some-absolute-div">
-                <h1 class="text-center m-auto">
-                    Hello, <span class="text-teal-dark">I'm Willem,</span><br>Freelance Front-end Developer
-                </h1>
-            </div>
-            </div>
+      <div class="hero-wrapper absolute-center text-center">
+        <div class="hero-center">
+          <h1 class="hero-title text-4xl uppercase font-semibold">Willem van Duijn <div class="title-spacer"></div><span class="block uppercase font-thin tracking-wider text-3xl">Front-end Developer</span></h1>
+          
         </div>
+      </div>
     </div>
-    
+  </div>
+
 </template>
+<script>
+import HeroTitle from './hero-title/HeroTitle';
+export default {
+    components: {
+        HeroTitle
+    }
+}
+</script>
 <style lang="scss">
-.void-animation {
+.wd-void-animation {
     margin-top: -80px;
     background: linear-gradient(90deg, #0F2027 0%, #203A43 53%, #2C5364 100%);
 }
@@ -29,7 +39,7 @@
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
 }
-.logos {
+.wd-logo {
     width: 400px;
     position:absolute;  
     top: calc(50% - 100px);
@@ -39,10 +49,29 @@
 .logo {
     width:100%;
 }
-.some-absolute-div {    
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.hero-center {
+    width: 100vw;
+    height: 100vh;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-title {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    letter-spacing: .05em;
+    color: #f9f9f9;
+}
+.title-spacer {
+    border: 0 solid #e7e6e6;
+    border-color: #f9f9f9d;
+    border-top-width: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 100%;
 }
 
 </style>

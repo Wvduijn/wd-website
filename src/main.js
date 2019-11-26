@@ -11,12 +11,8 @@ export default function(Vue, { router, head, isClient }) {
   // Push custom Fonts
   head.link.push({
     rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css?family=Roboto'
-  });
-  head.link.push({
-    rel: 'stylesheet',
     href:
-      'https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap'
+      '<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900&display=swap" rel="stylesheet">'
   });
   head.link.push({
     rel: 'stylesheet',
@@ -24,7 +20,8 @@ export default function(Vue, { router, head, isClient }) {
   });
   head.link.push({
     rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css?family=Montserrat'
+    href:
+      'https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700,900&display=swap'
   });
   // Push animation script for homepage header
   head.script.push({ src: 'js/particleAnim.js' });

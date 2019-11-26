@@ -1,13 +1,13 @@
 // CHeck for existence of mainAnim element on Page
 setTimeout(function() {
-  if (document.querySelector('.void-animation')) {
+  if (document.querySelector('.wd-void-animation')) {
     let max_particles = 500;
     let particles = [];
     let frequency = 10;
     let init_num = max_particles;
     let max_time = frequency * max_particles;
     let time_to_recreate = false;
-    let element = document.querySelector('.void-animation');
+    let element = document.querySelector('.wd-void-animation');
 
     // Enable repopolate
     setTimeout(

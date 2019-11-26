@@ -1,10 +1,9 @@
 <template>
   <section class="section">
-    <div class="container mx-auto max-w-3xl pt-5">
+    <div class="container mx-auto max-w-3xl pt-10">
       <slot name="section-title"></slot>
-      <div class="flex mb-4">
-        <div class="w-2/3 p-10"><slot name="left-content" /></div>
-        <div class="w-1/3 relative"><slot name="right-content" /></div>
+      <div class="flex">
+        <slot name="content" />
       </div>
     </div>
   </section>
