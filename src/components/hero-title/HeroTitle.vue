@@ -1,54 +1,50 @@
 <template>
-<div class="spinny-wrapper uppercase">
-    <h1>Willem van Duijn &nbsp; Freelance 
-        <span class="spinny-words">
-            <span>Front-end</span>
-            <span>Angular</span>
-            <span>Vue</span>
-            <span>Web</span>
-        </span>Developer &nbsp;
-    </h1>
+  <div class="py-20 absolute-center">
+    <div class="hero-wrapper absolute-center text-center">
+      <div class="hero-center">
+        <h1 class="hero-title text-4xl uppercase font-semibold">Willem van Duijn <div class="title-spacer"></div>
+          <span class="block uppercase font-thin tracking-wider text-3xl">Front-end Developer</span>
+          <div class="title-spacer"></div>
+          <span class="block uppercase font-thin tracking-wider font-bold text-sm">i write clean maintainable & scalable code</span>
+        </h1>
+      </div>
+    </div>
   </div>
 </template>
 <style lang="scss" scoped>
-h1 {
+.hero-center {
+    width: 100vw;
+    height: 100vh;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-title {
+    margin-top: 17%;
+    padding: 20px;
     font-family: 'Roboto', sans-serif;
-    span {
-        font-family: 'Roboto Condensed', sans-serif; 
-    }
+    font-style: normal;
+    letter-spacing: .05em;
+    color: #f9f9f9;
 }
-.spinny-words{
-    display: inline-block;
-    min-width: 350px;
-    max-width:500px;
-    text-align: left;
-    & span {
-        position: absolute;
-        font-weight: bold;
-        top:-0px;
-        opacity: 0;    
-        animation: rotateWord 18s linear infinite 0s;
-
-        &:nth-child(2) {
-          animation-delay: 3s;   
-        }
-        &:nth-child(3) {
-          animation-delay: 6s;   
-        }
-        &:nth-child(4) {
-          animation-delay: 9s;   
-        }
-    }
+.title-spacer {
+    border: 0 solid #e7e6e6;
+    border-color: #f9f9f9;
+    border-top-width: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 100%;
 }
-
-@keyframes rotateWord {
-  0%   { opacity: 0; }
-  2%   { opacity: 0; transform: translateY(-30px); }
-  5%   { opacity: 1; transform: translateY(0px);}
-  17%  { opacity: 1; transform: translateY(0px); }
-  20%  { opacity: 0; transform: translateY(30px); }
-  80%  { opacity: 0; }
-  100% { opacity: 0; }
+.parent {
+    position: relative;
+}
+.absolute-center {
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
 }
 
 </style>

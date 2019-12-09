@@ -9,7 +9,7 @@ let element = document.querySelector('.wd-void-animation');
 /* ---- CORE END ---- */
 /* ---- SETTINGS ---- */
 
-/**/ const numberParticlesStart = 250;
+/**/ const numberParticlesStart = 5000;
 const particleSpeed = 0.3;
 const velocity = 0.9;
 const circleWidth = 250;
@@ -45,6 +45,7 @@ Particle.prototype.render = function() {
   context.fillStyle = this.color;
   context.strokeStyle =
     'rgba(' + highlight[0] + ',' + highlight[1] + ',' + highlight[2] + ',0.2)';
+  // context.strokeStyle = 'rgba(0, 110, 114, .5)';
   context.arc(this.x, this.y, 0.5, 0, Math.PI * 2);
   context.fill();
   context.lineWidth = 0.2;

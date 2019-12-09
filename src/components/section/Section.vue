@@ -1,8 +1,8 @@
 <template>
   <section class="section">
-    <div class="container mx-auto max-w-3xl pt-10">
+    <div class="container mx-auto max-w-3xl pt-20 pb-20">
       <slot name="section-title"></slot>
-      <div class="flex">
+      <div class="flex content-center justify-center">
         <slot name="content" />
       </div>
     </div>

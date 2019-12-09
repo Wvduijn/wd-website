@@ -26,6 +26,7 @@
       </div>
       <div class="w-1/3 relative hidden md:block">
         <div class="absolute bottom-0">
+          
         </div>
       </div>
     </template>
@@ -43,7 +44,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .wd-background {
-  background: url('~@/assets/images/willemvanduijn.webp') bottom right no-repeat;
-  background-size: 35%;
+  background: url('~@/assets/images/willemvanduijn-hero.webp') bottom right no-repeat;
+  background-size: contain;
 }
 </style>

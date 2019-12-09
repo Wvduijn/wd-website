@@ -7,15 +7,16 @@
     <Skills />
 
     <!-- Clients Section -->
+    
 
-
-    <!-- Blog topm 3 -->
+    <!-- Blog top 3 -->
 
     <!-- Contact Section -->
+    <Contact />
 
 
     <!-- Author intro -->
-    <Author :show-title="true" />
+    <!-- <Author :show-title="true" /> -->
 
     <!-- List posts -->
     <!-- <div class="posts">
@@ -59,13 +60,15 @@ import Section from '~/components/section/Section.vue'
 import Skills from '~/components/sections/skills/Skills.vue'
 import TitleBlock from '~/components/title-block/TitleBlock.vue'
 import AboutMe from '~/components/sections/overmij/AboutMe.vue'
+import Contact from '~/components/sections/contact/Contact.vue'
 
 export default {
   components: {
     Author,
     PostCard,
     AboutMe,
-    Skills
+    Skills,
+    Contact
   },
   metaInfo: {
     title: 'Home'

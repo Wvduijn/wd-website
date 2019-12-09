@@ -26,10 +26,11 @@
       </main>
     </transition>
 
-    <footer class="footer">
+    <Footer />
+    <!-- <footer class="footer">
       <span class="footer__copyright">Copyright © {{ new Date().getFullYear() }}. WD. </span>
       <span class="footer__links">Powered by <a href="#"> Me </a></span>
-    </footer>
+    </footer> -->
 
   </div>
 </template>
@@ -39,6 +40,7 @@ import Logo from '~/components/Logo.vue'
 import ToggleTheme from '~/components/ToggleTheme.vue'
 import Hero from '~/components/Hero.vue'
 import Navigation from '~/components/navigation/Navigation.vue'
+import Footer from '~/components/footer/Footer.vue'
 
 
 export default {
@@ -49,7 +51,8 @@ export default {
     Logo,
     ToggleTheme,
     Hero,
-    Navigation
+    Navigation,
+    Footer
   }
 }
 </script>
@@ -89,20 +92,20 @@ export default {
   margin: 0 auto;
 }
 
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: calc(var(--space) / 2);
-  text-align: center;
-  font-size: .8em;
+// .footer {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   padding: calc(var(--space) / 2);
+//   text-align: center;
+//   font-size: .8em;
 
-  > span {
-    margin: 0 .35em;
-  }
+//   > span {
+//     margin: 0 .35em;
+//   }
 
-  a {
-    color: currentColor;
-  }
-}
+//   a {
+//     color: currentColor;
+//   }
+// }
 </style>
