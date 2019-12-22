@@ -5,3 +5,8 @@
 .space-bottom {
 	margin-bottom: var(--space);
 }
+
+.break {
+	flex-basis: 100%;
+	height:0;
+}

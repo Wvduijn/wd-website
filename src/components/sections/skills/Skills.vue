@@ -10,7 +10,7 @@
     <template v-slot:content>
       <div class="w-full p-10">
         <p class="font-black">
-            Door de jaren heen heb ik aan verscheidene Front-end projecten bij verscheidene organisaties gewerkt. Door de verscheidenheid aan projecten ook met een ruim scala aan technieken kunnen werken. Mijn voorkeur gaat uit naar het werken met de frameworks Angular &amp; Vue.
+            Door de jaren heen heb ik aan verscheidene Front-end projecten bij verscheidene organisaties gewerkt. Door de verscheidenheid aan projecten ook met een ruim scala aan technieken kunnen werken. Mijn voorkeur gaat uit naar het werken met de frameworks Angular &amp; Vue of StencilJS.
         </p>
         <p>
             Ik ben gewend aan een agile werkomgeving (SCRUM) en aan het werken in autonome DevOps/Feature teams.

@@ -15,7 +15,8 @@
         </p>
         <p>
           In mijn meest recente opdrachten ben ik voornamelijk bezig geweest met de realisatie van grote Front-end projecten.
-          Technieken en tools die hierbij voornamelijk aan bod kwamen zijn Angular, Typescript, Javascript, NPM, Yarn, Webpack, SystemJS, Sass & HTML.
+          Recent ook voornamelijk bezig geweest met het bouwen van micro front-ends op basis van Webcomponents (StencilJS).
+          Technieken en tools die hierbij voornamelijk aan bod kwamen zijn Angular, Vue, StencilJs, Lerna, Typescript, Javascript, NPM, Yarn, Webpack, SCSS & HTML.
         </p>
         <p>
           Naast mijn reguliere werkzaamheden ben ik in mijn vrije tijd ook graag bezig met het verder uitbreiden van mijn kennis m.b.t. technieken & frameworks. Denk hierbij aan hobby projecten met Vue, Nuxt, Node, Prisma & GraphQL.

@@ -8,6 +8,13 @@
       />
     </template>
     <template v-slot:content>
+      <div class="w-full md:w-3/4 p-10 text-center">
+        <p class="font-black">
+          Heeft u een interessante opdracht voor me welke aansluit bij mijn expertises?<br>
+          Neem dan contact met me op via de chat of e-mail.
+          
+        </p>
+      </div>
       <div class="form-wrapper w-full md:w-2/4">
         <form
           class="contact-form"
@@ -27,22 +34,22 @@
             <label> Don’t fill this out: <input name="bot-field" /> </label>
           </p>
           <div class="sender-info">
-            <span class="input input--chisato">
-              <input class="input__field input__field--chisato" type="text" id="naam" name="naam" v-model="formData.naam" />
-              <label class="input__label input__label--chisato" for="naam">
-                <span class="input__label-content input__label-content--chisato" data-content="Naam">Naam</span>
+            <span class="input input--wd" :class="{'input--filled': formData.naam}">
+              <input class="input__field input__field--wd" type="text" id="naam" name="naam" v-model="formData.naam" />
+              <label class="input__label input__label--wd" for="naam">
+                <span class="input__label-content input__label-content--wd" data-content="Naam">Naam</span>
               </label>
 				    </span>
-            <span class="input input--chisato">
-              <input class="input__field input__field--chisato" type="text" id="email" name="email" v-model="formData.email" />
-              <label class="input__label input__label--chisato" for="email">
-                <span class="input__label-content input__label-content--chisato" data-content="E-mail">E-mail</span>
+            <span class="input input--wd" :class="{'input--filled': formData.email}">
+              <input class="input__field input__field--wd" type="text" id="email" name="email" v-model="formData.email" />
+              <label class="input__label input__label--wd" for="email">
+                <span class="input__label-content input__label-content--wd" data-content="E-mail">E-mail</span>
               </label>
 				    </span>
-            <span class="input input--chisato">
-              <input class="input__field input__field--chisato" type="text" id="phone" name="phone" v-model="formData.phone" />
-              <label class="input__label input__label--chisato" for="phone">
-                <span class="input__label-content input__label-content--chisato" data-content="Telefoon">Telefoon</span>
+            <span class="input input--wd" :class="{'input--filled': formData.phone}">
+              <input class="input__field input__field--wd" type="text" id="phone" name="phone" v-model="formData.phone" />
+              <label class="input__label input__label--wd" for="phone">
+                <span class="input__label-content input__label-content--wd" data-content="Telefoon">Telefoon</span>
               </label>
 				    </span>
           </div>
@@ -52,6 +59,11 @@
             class="form-button uppercase float-shadow"
           >kop koffie</button>
         </form>
+      </div>
+      <div class="w-full md:w-3/4 text-center">
+      <h4>Ik ben beschikbaar per:</h4>
+        <div class="email">info@willemvanduijn.dev</div>
+        <div class="tel"> +31 6 83 90 92 34</div> <!-- +31 6 83 90 92 34 -->
       </div>
     </template>
   </Section>
@@ -99,8 +111,32 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.wd-background {
+  background: url('~@/assets/images/codemachine.webp') center center no-repeat;
+  background-size: cover;
+}
+h4 {
+  font-size: 1rem;
+  letter-spacing: 5px;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+}
+
+.email {
+  font-size: 40px;
+  color: var(--orange);
+  letter-spacing: 4px;
+}
+.tel {
+  color: #FFF;
+  font-size: 30px;
+  letter-spacing: 4px;
+  color: transparent;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
 .form-wrapper {
-  margin: 40px 0;
+  margin: 0 0 20px 0;
 
   .contact-form {
     // CUSTOM ANIMATED FIELD
@@ -158,12 +194,12 @@ export default {
       fill: none;
     }
 
-    .input--chisato {
+    .input--wd {
       width:100%;
 	    padding-top: 1em;
     }   
 
-    .input__field--chisato {
+    .input__field--wd {
       width: 100%;
       padding: 0.8em 0.5em;
       background: transparent;
@@ -173,7 +209,7 @@ export default {
       transition: border-color 0.25s;
     }
 
-    .input__label--chisato {
+    .input__label--wd {
       width: 100%;
       position: absolute;
       top: 0;
@@ -185,13 +221,13 @@ export default {
       transform: translate3d(0, 3em, 0);
     }
 
-    .input__label-content--chisato {
+    .input__label-content--wd {
       padding: 0 1em;
       font-weight: 400;
       color: #b5b5b5;
     }
 
-    .input__label-content--chisato::after {
+    .input__label-content--wd::after {
       content: attr(data-content);
       position: absolute;
       top: -200%;
@@ -200,24 +236,24 @@ export default {
       font-weight: 800;
     }
 
-    .input__field--chisato:focus,
-    .input--filled .input__field--chisato {
+    .input__field--wd:focus,
+    .input--filled .input__field--wd {
       border-color: var(--orange);
     }
 
-    .input__field--chisato:focus + .input__label--chisato,
-    .input--filled .input__label--chisato {
-      -webkit-animation: anim-chisato-1 0.25s forwards;
-      animation: anim-chisato-1 0.25s forwards;
+    .input__field--wd:focus + .input__label--wd,
+    .input--filled .input__label--wd {
+      -webkit-animation: anim-wd-1 0.25s forwards;
+      animation: anim-wd-1 0.25s forwards;
     }
 
-    .input__field--chisato:focus + .input__label--chisato .input__label-content--chisato,
-    .input--filled .input__label-content--chisato {
-      -webkit-animation: anim-chisato-2 0.25s forwards ease-in;
-      animation: anim-chisato-2 0.25s forwards ease-in;
+    .input__field--wd:focus + .input__label--wd .input__label-content--wd,
+    .input--filled .input__label-content--wd {
+      -webkit-animation: anim-wd-2 0.25s forwards ease-in;
+      animation: anim-wd-2 0.25s forwards ease-in;
     }
 
-    @-webkit-keyframes anim-chisato-1 {
+    @-webkit-keyframes anim-wd-1 {
       0%, 70% {
         -webkit-transform: translate3d(0, 3em, 0);
         transform: translate3d(0, 3em, 0);
@@ -228,7 +264,7 @@ export default {
       }
     }
 
-    @-webkit-keyframes anim-chisato-2 {
+    @-webkit-keyframes anim-wd-2 {
       0% {
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
@@ -246,7 +282,7 @@ export default {
       }
     }
 
-    @keyframes anim-chisato-1 {
+    @keyframes anim-wd-1 {
       0%, 70% {
         -webkit-transform: translate3d(0, 3em, 0);
         transform: translate3d(0, 3em, 0);
@@ -257,7 +293,7 @@ export default {
       }
     }
 
-    @keyframes anim-chisato-2 {
+    @keyframes anim-wd-2 {
       0% {
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);

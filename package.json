@@ -16,6 +16,7 @@
     "netlify-cms": "^2.9.7",
     "vue": "^2.6.10",
     "vue-backtotop": "^1.6.1",
+    "vue-flickity": "^1.2.1",
     "vue-fragment": "^1.5.1",
     "vue-loader": "^15.7.2"
   },

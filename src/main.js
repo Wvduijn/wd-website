@@ -41,6 +41,8 @@ export default function(Vue, { router, head, isClient }) {
   });
   // Push animation script for homepage header
   head.script.push({ src: 'js/particleAnim.js' });
+  // Push Chat script
+  head.script.push({ src: 'js/chat.js' });
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout);
   // FontAwesome

@@ -92,20 +92,4 @@ export default {
   margin: 0 auto;
 }
 
-// .footer {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   padding: calc(var(--space) / 2);
-//   text-align: center;
-//   font-size: .8em;
-
-//   > span {
-//     margin: 0 .35em;
-//   }
-
-//   a {
-//     color: currentColor;
-//   }
-// }
 </style>

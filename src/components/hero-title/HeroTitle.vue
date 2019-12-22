@@ -20,7 +20,7 @@
     align-items: center;
 }
 .hero-title {
-    margin-top: 17%;
+    margin-top: 20%;
     padding: 20px;
     font-family: 'Roboto', sans-serif;
     font-style: normal;

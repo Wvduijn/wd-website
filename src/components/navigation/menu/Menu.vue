@@ -46,7 +46,7 @@ ul {
 
 
 nav {
-  z-index: 800;
+  z-index: 500;
   position: fixed;
   top: -100%; left: 0;
   width: 100%;
@@ -72,10 +72,10 @@ nav {
     }
   }
   .closed & {
-    top: 0;
-    &:before {
+    top: -100%;
+    /* &:before {
       animation: reverse-animation 0.8s ease-out forwards;
-    }
+    } */
   }
 }
 

@@ -9,7 +9,7 @@ let element = document.querySelector('.wd-void-animation');
 /* ---- CORE END ---- */
 /* ---- SETTINGS ---- */
 
-/**/ const numberParticlesStart = 5000;
+/**/ const numberParticlesStart = 500;
 const particleSpeed = 0.3;
 const velocity = 0.9;
 const circleWidth = 250;

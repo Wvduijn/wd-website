@@ -7,9 +7,9 @@
     <Skills />
 
     <!-- Clients Section -->
-    
+    <Clients />
 
-    <!-- Blog top 3 -->
+    <!-- Blog top 3 ? -->
 
     <!-- Contact Section -->
     <Contact />
@@ -59,8 +59,9 @@ import PostCard from '~/components/PostCard.vue'
 import Section from '~/components/section/Section.vue'
 import Skills from '~/components/sections/skills/Skills.vue'
 import TitleBlock from '~/components/title-block/TitleBlock.vue'
-import AboutMe from '~/components/sections/overmij/AboutMe.vue'
+import AboutMe from '~/components/sections/aboutme/AboutMe.vue'
 import Contact from '~/components/sections/contact/Contact.vue'
+import Clients from '~/components/sections/testimonials/Clients.vue'
 
 export default {
   components: {
@@ -68,7 +69,8 @@ export default {
     PostCard,
     AboutMe,
     Skills,
-    Contact
+    Contact,
+    Clients
   },
   metaInfo: {
     title: 'Home'

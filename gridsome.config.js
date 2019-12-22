@@ -7,7 +7,7 @@
 module.exports = {
   siteName: 'Willem van Duijn - Front-end Developer',
   siteDescription:
-    'Willem van Duijn, Freelance Front-end Developer gespecialiseerd in Angular,Vue & recent ook webcomponents met StencilJS ',
+    'Willem van Duijn, Freelance Front-end Developer gespecialiseerd in Angular, Vue & recent ook webcomponents met StencilJS ',
 
   templates: {
     Post: '/:title',
