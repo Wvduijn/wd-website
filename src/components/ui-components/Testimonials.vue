@@ -130,5 +130,8 @@ export default {
 .flickity-viewport {
   overflow: hidden;
 }
+.flickity-enabled:focus{
+  outline:none;
+}
 }
 </style>
