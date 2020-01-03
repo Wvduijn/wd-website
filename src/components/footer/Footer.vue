@@ -103,7 +103,7 @@ $accent        : #E63020;
       color: #fff;
       position: absolute;
       width: 36%;
-      top: 7px;
+      /* top: 7px; */
       left: 19px;
       transition: all $timing ease-out;
   }

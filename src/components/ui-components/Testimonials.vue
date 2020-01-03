@@ -112,6 +112,7 @@ export default {
   // render
   /* position dots in carousel */
 .flickity-page-dots {
+  position: relative;
   bottom: 0px;
 }
 /* white circles */
@@ -125,6 +126,9 @@ export default {
 /* fill-in selected dot */
 .flickity-page-dots .dot.is-selected {
   background: white;
+}
+.flickity-viewport {
+  overflow: hidden;
 }
 }
 </style>
