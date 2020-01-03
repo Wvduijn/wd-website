@@ -27,10 +27,6 @@
     </transition>
 
     <Footer />
-    <!-- <footer class="footer">
-      <span class="footer__copyright">Copyright © {{ new Date().getFullYear() }}. WD. </span>
-      <span class="footer__links">Powered by <a href="#"> Me </a></span>
-    </footer> -->
 
   </div>
 </template>

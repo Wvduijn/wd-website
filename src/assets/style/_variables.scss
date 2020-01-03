@@ -1,49 +1,57 @@
 // Default variables
 html {
-	--base-font-size: 20px;
+  --base-font-size: 20px;
 }
 
 // Light default theme
 body {
- 	--bg-color: #F3F7F9;
- 	--bg-content-color: #fff;
- 	--bg-code: #fffbf3;
- 	--body-color: #2b303a;
- 	--title-color: #111;
-	 --link-color: #ee751c;
-	 --orange: #ee751c;
-	 --dark-orange: #E63020;
-	 --color-accent: #006e90;
-	 --color-accent-lighter: #adcad6;
-	 --text-color: #2b303a;
- 	--border-color:  rgba(0,0,0,.1);;
-  	--space: 3.5rem;
-  	--content-width: 860px;
-  	--header-height: 80px;
-	  --radius: 5px;
-	  --main-gradient: linear-gradient(260deg, rgba(15,32,39,1) 0%, rgba(32,58,67,1) 50%, rgba(44,83,100,1) 100%);
-	  --orange-gradient: linear-gradient(50deg, rgba(230,48,32,1) 0%, rgba(238,117,28,1) 100%);
+  --bg-color: #f3f7f9;
+  --bg-content-color: #fff;
+  --bg-code: #fffbf3;
+  --body-color: #2b303a;
+  --title-color: #111;
+  --link-color: #ee751c;
+  --orange: #ee751c;
+  --dark-orange: #e63020;
+  --color-accent: #006e90;
+  --color-accent-lighter: #adcad6;
+  --text-color: #2b303a;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --space: 3.5rem;
+  --content-width: 860px;
+  --header-height: 80px;
+  --radius: 5px;
+  --main-gradient: linear-gradient(
+    260deg,
+    rgba(15, 32, 39, 1) 0%,
+    rgba(32, 58, 67, 1) 50%,
+    rgba(44, 83, 100, 1) 100%
+  );
+  --orange-gradient: linear-gradient(
+    50deg,
+    rgba(230, 48, 32, 1) 0%,
+    rgba(238, 117, 28, 1) 100%
+  );
 }
 
 // Make  things smaller for mobile
 @media screen and (max-width: 650px) {
-	html {
-		--base-font-size: 17px;
-	}
-	body {
-		--space: 1.5rem;
-		--header-height: 60px;
-	}
+  html {
+    --base-font-size: 17px;
+  }
+  body {
+    --space: 1.5rem;
+    --header-height: 60px;
+  }
 }
 
-
 // Override variables for Dark theme
-body[data-theme="dark"] {
- 	--bg-color: #0D2538;
- 	--bg-content-color: #0f2d44;
- 	--bg-code: rgba(0,0,0,.3);
- 	--border-color:  rgba(255,255,255,.1);;
- 	--body-color: #ced8de;
- 	--title-color: #fff;
- 	--link-color: #af9cef;
+body[data-theme='dark'] {
+  --bg-color: #0d2538;
+  --bg-content-color: #0f2d44;
+  --bg-code: rgba(0, 0, 0, 0.3);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --body-color: #ced8de;
+  --title-color: #fff;
+  --link-color: #af9cef;
 }

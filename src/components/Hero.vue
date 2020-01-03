@@ -4,7 +4,7 @@
     <div class="wd-logo">
       <g-image
         src="~/assets/images/wd.svg"
-        class="logo"
+        class="wd-logo__image"
       />
     </div>
     <HeroTitle />
@@ -32,10 +32,11 @@ export default {
     position:absolute;  
     top: calc(50% - 100px);
     left: calc(50% - 200px);
+
+    &__image{
+      width:100%;
+    }
     
-}
-.logo {
-    width:100%;
 }
 
 

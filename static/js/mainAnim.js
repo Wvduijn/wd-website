@@ -1,5 +1,5 @@
 // CHeck for existence of mainAnim element on Page
-setTimeout(function() {
+document.addEventListener('DOMContentLoaded', event => {
   if (document.querySelector('.wd-void-animation')) {
     let max_particles = 500;
     let particles = [];
@@ -157,4 +157,4 @@ setTimeout(function() {
     }
     update();
   }
-}, 3000);
+});
