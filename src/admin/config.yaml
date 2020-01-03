@@ -27,7 +27,7 @@ collections:
   - name: "pagesections"
     label: "PageSections"
     files:
-      -file: "content/sections/aboutme/index.md"
+      - file: "content/sections/aboutme/index.md"
         label: "About me"
         name: "about"
         fields:
@@ -39,7 +39,7 @@ collections:
             fields:
               - { label: "Intro", name: "intro", widget: "text"}
               - { label: "Maincontent", name: "maincontent", widget: "markdown"}
-      -file: "content/sections/skills/index.md"
+      - file: "content/sections/skills/index.md"
         label: "Skills"
         name: "skills"
         fields:

@@ -1,4 +1,3 @@
-// (function() {
 function rafAsync() {
   return new Promise(resolve => {
     requestAnimationFrame(resolve); //faster than set time out
@@ -7,15 +6,16 @@ function rafAsync() {
 
 async function checkElement(selector) {
   const querySelector = document.querySelector(selector);
-  while (querySelector === null) {
+  while (querySelector === null || querySelector === undefined) {
     await rafAsync();
+    console.log('animatioFrame undefined or null');
   }
   return querySelector;
 }
 
 checkElement('.wd-void-animation') //use whichever selector you want
   .then(element => {
-    console.info(element); /* ---- CORE ---- */
+    console.log(element); /* ---- CORE ---- */
     //Do whatever you want now the element is there
     /**/ /**/ const canvas = document.createElement('canvas');
     /**/ const context = canvas.getContext('2d');
