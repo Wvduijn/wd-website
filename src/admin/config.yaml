@@ -23,12 +23,10 @@ collections:
         field: {label: Name, name: name, widget: string, default: "tag"}
       - {label: "Cover Image", name: "cover_image", widget: "image", required: false}
       - {label: "Description", name: "description", widget: "markdown"}
-      - {label: "Body", name: "body", widget: "markdown"}
-  # Page Sections Go here    
+      - {label: "Body", name: "body", widget: "markdown"} 
   - name: "pagesections"
     label: "PageSections"
     files:
-      # ABOUT ME SECTION
       -file: "content/sections/aboutme/index.md"
         label: "About me"
         name: "about"
@@ -41,7 +39,6 @@ collections:
             fields:
               - { label: "Intro", name: "intro", widget: "text"}
               - { label: "Maincontent", name: "maincontent", widget: "markdown"}
-      # SKILLS SECTION
       -file: "content/sections/skills/index.md"
         label: "Skills"
         name: "skills"
@@ -62,8 +59,6 @@ collections:
               [
                 { label: "Title", name: "title", widget: "string"}
                 { label: "Image", name: "image", widget: "image"}          
-              ]
-      # CLIENTS SECTION
-      # CONTACT SECTION      
+              ] 
               
 
