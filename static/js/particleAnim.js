@@ -20,12 +20,16 @@ function elementReady(selector) {
 
 elementReady('.wd-void-animation').then(element => {
   console.log(element); /* ---- CORE ---- */
+  createAnim();
+});
+
+function createAnim() {
   //Do whatever you want now the element is there
-  /**/ /**/ const canvas = document.createElement('canvas');
-  /**/ const context = canvas.getContext('2d');
-  /**/ let windowWidth = (canvas.width = window.innerWidth);
-  /**/ let windowHeight = (canvas.height = window.innerHeight);
-  // let element = document.querySelector('.wd-void-animation');
+  const canvas = document.createElement('canvas');
+  const context = canvas.getContext('2d');
+  let windowWidth = (canvas.width = window.innerWidth);
+  let windowHeight = (canvas.height = window.innerHeight);
+  let element = document.querySelector('.wd-void-animation');
   /**/ canvas.id = 'canvas';
   /**/ element.append(canvas);
   /* ---- CORE END ---- */
@@ -164,4 +168,4 @@ elementReady('.wd-void-animation').then(element => {
   });
 
   loop();
-});
+}
