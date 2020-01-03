@@ -1,6 +1,6 @@
 function rafAsync() {
   return new Promise(resolve => {
-    requestAnimationFrame(resolve); //faster than set time out
+    window.requestAnimationFrame(resolve); //faster than set time out
   });
 }
 
