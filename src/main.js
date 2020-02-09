@@ -1,5 +1,6 @@
 // Import main css
 import '~/assets/style/index.scss';
+import 'highlight.js/styles/night-owl.css';
 
 // Import default layout so we don't need to import it to every page
 import DefaultLayout from '~/layouts/Default.vue';
@@ -18,6 +19,7 @@ import {
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 import '@fortawesome/fontawesome-svg-core/styles.css';
+
 
 config.autoAddCss = false;
 library.add(faGithub, faTwitter, faInstagram, faLinkedin, faChevronUp);

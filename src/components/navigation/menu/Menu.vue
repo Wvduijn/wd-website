@@ -2,9 +2,9 @@
      <div :class="{'open': open, 'closed': closed}" >  
     <nav>
         <ul class="menu">
-            <li data-text="Home">Home</li>
-            <li data-text="Blog">Blog</li>
-            <li data-text="Contact">Contact</li>
+            <li data-text="Home"><g-link to="/">Home</g-link></li>
+            <li data-text="Blog"><g-link to="/blog">Blog</g-link></li>
+            <li data-text="Contact"><a href="#contact" title="Contact">Contact</a></li>
         </ul>
     </nav>
     </div> 
@@ -41,6 +41,11 @@ ul {
     cursor: pointer;
     padding: 6px 20px;
     font-size: 48px;
+    a{
+      z-index: 9000;
+      display: block;
+      color: #FFF;
+    }
   }
 }
 
@@ -91,6 +96,7 @@ ul.menu {
     opacity: 0;
     text-align: center;
     transform: translate3d(0,36px,0);
+
     &:before {
       content: '';
       @include position-center;
@@ -101,30 +107,41 @@ ul.menu {
       overflow: hidden;
       transition: width 0.14s ease-out;
     }
-    &:after {
-      opacity: 0;
-      content: attr(data-text);
-      @include position-center;
+
+    a:hover {
+      transition: color .3s;
       color: $color;
-      overflow: hidden;
-      transform: translate(-24px, 6px);
-      transition: transform 0.1s ease-out,
-                  opacity 0.1s ease-out;
     }
-    &:hover {
-      &:before {
-        left: 0;
-        right: auto;
-        width: 100%;
-      }
-      &:after {
-        opacity: 1;
-        padding: 0 20px;
-        transform: translate(0px, 6px);
-        transition: transform 0.2s 0.14s ease-out,
-                    opacity 0.2s 0.14s ease-out;
-      }
+
+    a::before, a::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100px;
+      height: 100px;
+      border: 2px solid rgba(252, 105, 105, 0.1);
+      border-radius: 50%;
+      content: '';
+      opacity: 0;
+      transition: transform 0.3s, opacity 0.3s;
+      transform: translateX(-50%) translateY(-50%) scale(0.2);
     }
+
+    a::after{
+      width: 90px;
+      height: 90px;
+      border-width: 6px;
+      transform: translateX(-50%) translateY(-50%) scale(0.8);
+    }
+
+    a:hover::before,
+    a:hover::after,
+    a:focus::before,
+    a:focus::after {
+      opacity: 1;
+      transform: translateX(-50%) translateY(-50%) scale(1.1);
+    }
+    
     .open & {
       opacity: 1;
       transform: translate3d(0,0,0);

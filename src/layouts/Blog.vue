@@ -1,17 +1,20 @@
 <template>
   <div id="app">
-    <Navigation />
+    
     <header class="header justify-between">
 
       <div class="header__left">
         <Logo v-if="showLogo" />
       </div>
+      <div class="flex justify-end ml-auto">
+       
+      </div>
       <div class="header__right ml-20">
-        <ToggleTheme />
+         <Navigation />
+         <ToggleTheme />
       </div>
     </header>
-    <Hero />
-    <Section />
+    <BlogHero />
     <transition
       name="fade"
       appear
@@ -24,27 +27,29 @@
       </main>
     </transition>
 
+    <Footer />
+
   </div>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
-import Hero from '~/components/Hero.vue'
-import Section from '~/components/section/Section.vue'
-import Navigation from '~/components/navigation/Navigation.vue'
-
 import ToggleTheme from '~/components/ToggleTheme.vue'
+import BlogHero from '~/components/BlogHero.vue'
+import Navigation from '~/components/navigation/Navigation.vue'
+import Footer from '~/components/footer/Footer.vue'
+
 
 export default {
   props: {
     showLogo: { default: true }
   },
   components: {
-    Hero,
     Logo,
     ToggleTheme,
-    Section,
-    Navigation
+    BlogHero,
+    Navigation,
+    Footer
   }
 }
 </script>
@@ -63,7 +68,6 @@ export default {
   transform: translateY(-50px);
   opacity: 0;
 }
-
 .header {
   background: rgba(0,0,0,0);
   display: flex;
@@ -89,23 +93,6 @@ export default {
 
 .main {
   margin: 0 auto;
-  padding: 1.5vw 15px 0;
 }
 
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: calc(var(--space) / 2);
-  text-align: center;
-  font-size: .8em;
-
-  > span {
-    margin: 0 .35em;
-  }
-
-  a {
-    color: currentColor;
-  }
-}
 </style>

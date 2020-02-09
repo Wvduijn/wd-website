@@ -14,20 +14,36 @@
     <div class="break"></div>
     <div class="footer__social">
 
-      <a class="social-icon social-icon--github" title="Github" target="_blank">
-        <font-awesome :icon="['fab', 'github']"/>
+      <a
+        class="social-icon social-icon--github"
+        title="Github"
+        target="_blank"
+      >
+        <font-awesome :icon="['fab', 'github']" />
       </a>
 
-      <a class="social-icon social-icon--linkedin" title="LinkedIn" target="_blank">
-        <font-awesome :icon="['fab', 'linkedin']"/>
+      <a
+        class="social-icon social-icon--linkedin"
+        title="LinkedIn"
+        target="_blank"
+      >
+        <font-awesome :icon="['fab', 'linkedin']" />
       </a>
 
-      <a class="social-icon social-icon--twitter" title="Twitter" target="_blank">
-        <font-awesome :icon="['fab', 'twitter']"/>
+      <a
+        class="social-icon social-icon--twitter"
+        title="Twitter"
+        target="_blank"
+      >
+        <font-awesome :icon="['fab', 'twitter']" />
       </a>
 
-      <a class="social-icon social-icon--instagram" title="Instagram" target="_blank">
-        <font-awesome :icon="['fab', 'instagram']"/>
+      <a
+        class="social-icon social-icon--instagram"
+        title="Instagram"
+        target="_blank"
+      >
+        <font-awesome :icon="['fab', 'instagram']" />
       </a>
 
     </div>
@@ -137,9 +153,5 @@ $accent        : #E63020;
       }
   }
 }
-  
-    
-
-
 
 </style>

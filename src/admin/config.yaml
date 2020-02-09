@@ -39,26 +39,26 @@ collections:
             fields:
               - { label: "Intro", name: "intro", widget: "text"}
               - { label: "Maincontent", name: "maincontent", widget: "markdown"}
-      # - file: "content/sections/skills/index.md"
-      #   label: "Skills"
-      #   name: "skills"
-      #   fields:
-      #     - { label: "Title", name: "title", widget: "string"}
-      #     - { label: "Subtitle", name: "subtitle", widget: "string"}
-      #     - label: "Content", 
-      #       name: "content", 
-      #       widget: "Object"
-      #       fields:
-      #         - { label: "Intro", name: "intro", widget: "text"}
-      #         - { label: "Maincontent", name: "maincontent", widget: "markdown"}
-      #     - label: "Skill", 
-      #       name: "skill", 
-      #       widget: "Object"
-      #       create: true # Allow users to create new documents in this collection
-      #       fields:
-      #         [
-      #           { label: "Title", name: "title", widget: "string"}
-      #           { label: "Image", name: "image", widget: "image"}          
-      #         ] 
+      - file: "content/sections/skills/index.md"
+        label: "Skills"
+        name: "skills"
+        fields:
+          - { label: "Title", name: "title", widget: "string"}
+          - { label: "Subtitle", name: "subtitle", widget: "string"}
+          - label: "Content", 
+            name: "content", 
+            widget: "Object"
+            fields:
+              - { label: "Intro", name: "intro", widget: "text"}
+              - { label: "Maincontent", name: "maincontent", widget: "markdown"}
+          - label: "Skill", 
+            name: "skill", 
+            widget: "Object"
+            create: true # Allow users to create new documents in this collection
+            fields:
+              [
+                { label: "Title", name: "title", widget: "string"}
+                { label: "Image", name: "image", widget: "image"}          
+              ] 
               
 

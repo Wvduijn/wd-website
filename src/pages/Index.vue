@@ -2,7 +2,6 @@
   <Layout :show-logo="true">
     <!-- Over mij Section -->
     <AboutMe />
-
     <!-- Skills Section -->
     <Skills />
 
@@ -10,10 +9,10 @@
     <Clients />
 
     <!-- Blog top 3 ? -->
+    
 
     <!-- Contact Section -->
     <Contact />
-
 
     <!-- Author intro -->
     <!-- <Author :show-title="true" /> -->
@@ -25,7 +24,6 @@
 
   </Layout>
 </template>
-
 <page-query>
 query {
   posts: allPost(filter: { published: { eq: true }}) {

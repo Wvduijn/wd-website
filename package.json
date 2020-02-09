@@ -7,12 +7,17 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
+    "@contentful/rich-text-html-renderer": "^13.4.0",
     "@gridsome/plugin-google-analytics": "^0.1.0",
     "@gridsome/remark-prismjs": "^0.2.0",
+    "@gridsome/source-contentful": "^0.5.2",
     "@gridsome/source-filesystem": "^0.6.0",
     "@gridsome/transformer-remark": "^0.3.4",
     "gridsome": "^0.7.7",
     "gridsome-plugin-netlify-cms": "^1.0.9",
+    "gridsome-plugin-remark-prismjs-all": "^0.3.1",
+    "highlight.js": "^9.18.1",
+    "markdown-it": "^10.0.0",
     "netlify-cms": "^2.9.7",
     "vue": "^2.6.10",
     "vue-backtotop": "^1.6.1",

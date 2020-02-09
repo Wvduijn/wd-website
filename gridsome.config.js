@@ -11,10 +11,25 @@ module.exports = {
 
   templates: {
     Post: '/:title',
-    Tag: '/tag/:id'
+    Tag: '/tag/:id',
+    ContentfulBlogPost: '/blog/:slug'
   },
 
   plugins: [
+    // Integrate Contentful
+    {
+      use: '@gridsome/source-contentful',
+      options: {
+        space: process.env.CONTENTFUL_SPACE,
+        accessToken: process.env.CONTENTFUL_TOKEN,
+        host: 'cdn.contentful.com',
+        environment: process.env.CONTENTFUL_ENVIRONMENT,
+        typename: 'Contentful',
+        routes: {
+          ContentfulBlogPost: '/blog/:slug',
+        }
+      }
+    },
     {
       // Create posts from markdown files
       use: '@gridsome/source-filesystem',
@@ -56,7 +71,9 @@ module.exports = {
       externalLinksTarget: '_blank',
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
       anchorClassName: 'icon icon-link',
-      plugins: ['@gridsome/remark-prismjs']
+      plugins: [
+        '@gridsome/remark-prismjs'
+      ]
     }
   }
 };
