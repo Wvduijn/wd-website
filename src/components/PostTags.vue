@@ -1,7 +1,7 @@
 <template>
    <div class="post-tags">
-   		<g-link class="post-tags__link" v-for="(tag, index) in post.tags" :key="index" :to="`/tags/${tag}`">
-   			<span>#</span> {{ tag }}
+   		<g-link class="post-tags__link" v-for="(tag, index) in post.hashtags" :key="index" :to="`/blog/tag/${tag.title}`">
+   			<span>#</span> {{ tag.title }}
    		</g-link>
     </div>
 </template>
@@ -21,7 +21,7 @@ export default {
   	font-size: .8em;
   	color: currentColor;
   	text-decoration: none;
-  	background-color: var(--bg-color);
+  	background-color: var(--color-accent);
   	color: currentColor!important; //Todo: remove important;
   	padding: .5em;
   	border-radius: var(--radius);

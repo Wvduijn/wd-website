@@ -46,6 +46,7 @@
     align-items: flex-end;
     overflow:hidden;
     padding-bottom: 50px;
+    border-bottom: 1px solid var(--orange);
 
         &__effect {
             animation: kenburns 30s infinite;
@@ -77,6 +78,8 @@
     &__subtitle {
         text-transform: uppercase;
         color: var(--orange);
+        padding: 10px;
+        background: var(--bg-content-color);
     }
 }
 </style>

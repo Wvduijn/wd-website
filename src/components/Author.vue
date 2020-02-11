@@ -6,12 +6,12 @@
 		</h1>
 
 		<p class="author__intro">
-			A simple, hackable & minimalistic starter for Gridsome that uses Netlify CMS for content.
+			Heb je vragen of wil je iets met me bespreken? <br> Neem dan <a href="mailto:info@willemvanduijn.dev" title="Contact">contact</a> met me op!
 		</p>
 
 		<p class="author__links">
-			<a href="//twitter.com/suits_at">Follow on Twitter</a>
-			<a href="https://github.com/suits-at/netlifycms-gridsome">GitHub</a>
+			<a href="https://www.linkedin.com/in/willemvanduijn/">LinkedIn</a>
+			<a href="https://github.com/Wvduijn">GitHub</a>
 		</p>
 
 	</div>
@@ -31,7 +31,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .author {
 	margin: 0 auto;
 	max-width: 500px;

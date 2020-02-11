@@ -111,7 +111,6 @@ export default {
             title
             date
             publishDate (format:"DD-MM-YYYY", locale: "nl-NL")
-            tags
             heroImage {
                 file {
                     url
@@ -121,6 +120,9 @@ export default {
               name
             }
             body
+            hashtags {
+              title
+            }
         }
     }
 </page-query>

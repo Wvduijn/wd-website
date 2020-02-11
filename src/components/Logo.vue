@@ -15,7 +15,7 @@ query {
 }
 </static-query>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .logo {
 
 	&__image {

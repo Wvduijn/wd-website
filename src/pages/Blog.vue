@@ -21,7 +21,9 @@ query Posts {
         title
         description
         body
-        tags
+        hashtags {
+          title
+        }
         heroImage {
           file {
             fileName

@@ -20,6 +20,10 @@
     display:flex;
     align-items: flex-end;
     padding-bottom: 50px;
+    border-bottom: 1px solid var(--orange);
+    box-shadow: 
+        inset 0px 11px 8px -10px #333,
+        inset 0px -11px 8px -10px #333; 
 
     &:after{
       content: '';

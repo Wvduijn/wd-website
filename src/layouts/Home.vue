@@ -49,7 +49,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .fade-enter-active, .fade-leave-active {
   transition: all .5s;
 }
