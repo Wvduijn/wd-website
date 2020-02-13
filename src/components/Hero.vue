@@ -7,8 +7,8 @@
         class="wd-logo__image"
       />
     </div>
-    <HeroTitle />
-    <ScrollMouse />
+    <hero-title />
+    <scroll-mouse />
   </div>
 
 </template>

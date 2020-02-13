@@ -14,7 +14,7 @@
          <ToggleTheme />
       </div>
     </header>
-    <BlogHero />
+    <blog-hero />
     <transition
       name="fade"
       appear

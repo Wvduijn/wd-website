@@ -1,7 +1,7 @@
 <template>
   <Section>
     <template v-slot:section-title>
-      <TitleBlock
+      <title-block
         title="Wat zeggen opdrachtgevers"
         subtitle="onder andere gewerkt voor"
       />

@@ -1,7 +1,7 @@
 <template>
   <Section class="wd-background">
     <template v-slot:section-title>
-      <TitleBlock
+      <title-block
         title="Waarom mij inhuren?"
         subtitle="HTML / SCSS • JAVASCRIPT • ANGULAR • VUE"
       />
@@ -24,136 +24,136 @@
           <!-- Four columns -->
           <div class="flex flex-wrap mb-4">
 
-            <div class="w-1/4">
-              <SkillCard title="Angular">
+            <div class="w-2/4 md:w-1/4">
+              <skill-card title="Angular">
                 <template v-slot:image>
                   <g-image
                     src="~/assets/images/dev-logos/angular.png"
                     alt="Angular"
                   />
                 </template>
-              </SkillCard>
+              </skill-card>
             </div>
 
-            <div class="w-1/4">
-              <SkillCard title="Vue">
+            <div class="w-2/4 md:w-1/4">
+              <skill-card title="Vue">
                 <template v-slot:image>
                   <g-image
                     src="~/assets/images/dev-logos/vue.png"
                     alt="Vue"
                   />
                 </template>
-              </SkillCard>
+              </skill-card>
             </div>
 
-            <div class="w-1/4">
-              <SkillCard title="Stencil">
+            <div class="w-2/4 md:w-1/4">
+              <skill-card title="Stencil">
                 <template v-slot:image>
                   <g-image
                     src="~/assets/images/dev-logos/stencil.png"
                     alt="Stencil"
                   />
                 </template>
-              </SkillCard>
+              </skill-card>
             </div>
 
-            <div class="w-1/4">
-              <SkillCard title="Javascript">
+            <div class="w-2/4 md:w-1/4">
+              <skill-card title="Javascript">
                 <template v-slot:image>
                   <g-image
                     src="~/assets/images/dev-logos/javascript-plain.png"
                     alt="Vue"
                   />
                 </template>
-              </SkillCard>
+              </skill-card>
             </div>
 
-             <div class="w-1/4">
-              <SkillCard title="Typescript">
+             <div class="w-2/4 md:w-1/4">
+              <skill-card title="Typescript">
                 <template v-slot:image>
                   <g-image
                     src="~/assets/images/dev-logos/typescript-plain.png"
                     alt="Vue"
                   />
                 </template>
-              </SkillCard>
+              </skill-card>
             </div>
 
-            <div class="w-1/4">
-              <SkillCard title="Html / (s)css">
+            <div class="w-2/4 md:w-1/4">
+              <skill-card title="Html / (s)css">
                 <template v-slot:image>
                   <g-image
                     src="~/assets/images/dev-logos/html5.png"
                     alt="Vue"
                   />
                 </template>
-              </SkillCard>
+              </skill-card>
             </div>
 
-            <div class="w-1/4">
-              <SkillCard title="Sass">
+            <div class="w-2/4 md:w-1/4">
+              <skill-card title="Sass">
                 <template v-slot:image>
                   <g-image
                     src="~/assets/images/dev-logos/sass.png"
                     alt="Vue"
                   />
                 </template>
-              </SkillCard>
+              </skill-card>
             </div>
 
-            <div class="w-1/4">
-              <SkillCard title="node">
+            <div class="w-2/4 md:w-1/4">
+              <skill-card title="node">
                 <template v-slot:image>
                   <g-image
                     src="~/assets/images/dev-logos/node.png"
                     alt="Vue"
                   />
                 </template>
-              </SkillCard>
+              </skill-card>
             </div>
 
-            <div class="w-1/4">
-              <SkillCard title="GraphQL">
+            <div class="w-2/4 md:w-1/4">
+              <skill-card title="GraphQL">
                 <template v-slot:image>
                   <g-image
                     src="~/assets/images/dev-logos/GraphQL_Logo.png"
                     alt="GraphQL"
                   />
                 </template>
-              </SkillCard>
+              </skill-card>
             </div>
 
-            <div class="w-1/4">
-              <SkillCard title="Apollo">
+            <div class="w-2/4 md:w-1/4">
+              <skill-card title="Apollo">
                 <template v-slot:image>
                   <g-image
                     src="~/assets/images/dev-logos/apollo.png"
                     alt="Apollo"
                   />
                 </template>
-              </SkillCard>
+              </skill-card>
             </div>
 
-            <div class="w-1/4">
-              <SkillCard title="Webpack">
+            <div class="w-2/4 md:w-1/4">
+              <skill-card title="Webpack">
                 <template v-slot:image>
                   <g-image
                     src="~/assets/images/dev-logos/webpack-original.png"
                     alt="Webpack"
                   />
                 </template>
-              </SkillCard>
+              </skill-card>
             </div>
 
-            <div class="w-1/4">
-              <SkillCard title="NPM">
+            <div class="w-2/4 md:w-1/4">
+              <skill-card title="NPM">
                 <template v-slot:image>
                   <g-image
                     src="~/assets/images/dev-logos/npm-original-wordmark.png"
                     alt="NPM"
                   />
                 </template>
-              </SkillCard>
+              </skill-card>
             </div>
 
           </div>

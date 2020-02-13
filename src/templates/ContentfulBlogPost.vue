@@ -1,6 +1,6 @@
 <template>
   <BlogPostLayout>
-    <BlogPostHero :post="$page.post" />
+    <blog-post-hero :post="$page.post" />
     <!-- <div class="post-title">
       <h1 class="post-title__text">
         {{ $page.post.title }}

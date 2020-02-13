@@ -1,37 +1,21 @@
 <template>
   <Section class="wd-background">
     <template v-slot:section-title>
-      <TitleBlock
+      <title-block
         title="Over mij"
         subtitle="front-end developer"
       />
     </template>
 
     <template v-slot:content>
-      <div class="w-full md:w-2/3 p-10">
+      <div class="w-full lg:w-2/3 p-10 sm:pb-60">
         <p class="font-black">
           {{ $static.about.intro }}
-          <!-- Ervaren & enthousiaste Front-end Developer met ruim 12 jaar werkervaring.
-          Gespecialiseerd in Javascript / Angular / Vue & de bouw van responsive websites/applicaties met het oog op performance. -->
         </p>
         <div v-html="$static.about.body"></div>
-        <!-- <p v-html="$static.about.body"> -->
-        <!-- {{ $static.about.body }} -->
-        <!-- In mijn meest recente opdrachten ben ik voornamelijk bezig geweest met de realisatie van grote Front-end projecten.
-          Recent ook voornamelijk bezig geweest met het bouwen van micro front-ends op basis van Webcomponents (StencilJS).
-          Technieken en tools die hierbij voornamelijk aan bod kwamen zijn Angular, Vue, StencilJs, Lerna, Typescript, Javascript, NPM, Yarn, Webpack, SCSS & HTML. -->
-        <!-- </p> -->
-        <!-- <p>
-          Naast mijn reguliere werkzaamheden ben ik in mijn vrije tijd ook graag bezig met het verder uitbreiden van mijn kennis m.b.t. technieken & frameworks. Denk hierbij aan hobby projecten met Vue, Nuxt, Node, Prisma & GraphQL.
-        </p>
-        <p>
-          De trends & laatste ontwikkelingen volgen, maar ook jezelf dwingen om continu bij te blijven leren, is wat het Front-end vak voor mij zo leuk & uitdagend maakt.
-        </p> -->
       </div>
-      <div class="w-1/3 relative hidden md:block">
-        <div class="absolute bottom-0">
-
-        </div>
+      <div class="w-full lg:w-1/3 h-46 relative align-wd">
+          <div class="block lg:hidden"><g-image src="~/assets/images/willemvanduijn-hero.webp" /></div>
       </div>
     </template>
   </Section>
@@ -59,6 +43,19 @@ export default {
 <style lang="scss" scoped>
 .wd-background {
   background: url('~@/assets/images/willemvanduijn-hero.webp') bottom right no-repeat;
-  background-size: contain;
+  background-size: 65% contain;
+  @media screen and (max-width: 1000px) {
+    background: none;
+  }
+
+}
+.align-wd {
+  margin-bottom: 0;
+  @media screen and (max-width: 650px) {
+    margin-bottom: -85px;
+  }
+  @media screen and (min-width: 651px) and (max-width: 1000px) {
+    margin-bottom: -100px;
+  }
 }
 </style>

@@ -2,22 +2,23 @@
 <!-- #TODO: Seperate Input Field into seperate components -->
   <Section class="wd-background">
     <template v-slot:section-title>
-      <TitleBlock
+      <a name="Contact"></a> <!-- -->
+      <title-block
         title="Samenwerken?"
         subtitle="vertel me meer over het project"
       />
     </template>
     <template v-slot:content>
-      <div class="w-full md:w-3/4 p-10 text-center">
+      <div class="w-full md:w-3/4 p-10 pb-0 text-center">
         <p class="font-black">
           Heeft u een interessante opdracht voor me welke aansluit bij mijn expertises?<br>
           Neem dan contact met me op via de chat of e-mail.
           
         </p>
       </div>
-      <div class="form-wrapper w-full md:w-2/4">
+      <div class="form-wrapper w-full md:w-3/4">
         <form
-          class="contact-form"
+          class="contact-form p-5"
           name="contact"
           method="post"
           v-on:submit.prevent="handleSubmit"
@@ -52,6 +53,12 @@
                 <span class="input__label-content input__label-content--wd" data-content="Telefoon">Telefoon</span>
               </label>
 				    </span>
+            <span class="input input--wd" :class="{'input--filled': formData.comment}">
+              <textarea class="input__field input__field--wd" id="comment" name="comment" v-model="formData.comment" rows="4" />
+              <label class="input__label input__label--wd" for="comment">
+                <span class="input__label-content input__label-content--wd" data-content="Omschrijving">Omschrijving</span>
+              </label>
+				    </span>
           </div>
 
           <button
@@ -62,8 +69,8 @@
       </div>
       <div class="w-full md:w-3/4 text-center">
       <h4>Ik ben beschikbaar per:</h4>
-        <div class="email">info@willemvanduijn.dev</div>
-        <div class="tel"> +31 6 83 90 92 34</div> <!-- +31 6 83 90 92 34 -->
+        <div class="email text-2xl">info@willemvanduijn.dev</div>
+        <div class="tel text-xl"> +31 6 83 90 92 34</div> <!-- +31 6 83 90 92 34 -->
       </div>
     </template>
   </Section>
@@ -123,13 +130,11 @@ h4 {
 }
 
 .email {
-  font-size: 40px;
   color: var(--orange);
   letter-spacing: 4px;
 }
 .tel {
   color: #FFF;
-  font-size: 30px;
   letter-spacing: 4px;
   color: transparent;
   text-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -391,6 +396,10 @@ h4 {
       height: 60px;
       padding: 0 20px;
       color: #555c6e;
+    }
+
+    textarea {
+      height: auto;
     }
 
     label {
