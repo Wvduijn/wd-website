@@ -18,6 +18,7 @@
     <transition
       name="fade"
       appear
+      mode="out-in"
     >
       <main class="main">
 
@@ -25,9 +26,10 @@
 
       </main>
     </transition>
-
+    <back-to-top bottom="100px" right="34px">
+      <button type="button" class="btn btn-info btn-to-top"><font-awesome :icon="['fas', 'chevron-up']" /></i></button>
+    </back-to-top>
     <Footer />
-
   </div>
 </template>
 
@@ -86,6 +88,20 @@ export default {
 
 .main {
   margin: 0 auto;
+}
+
+.btn-to-top {
+  width: 60px;
+  height: 60px;
+  padding: 10px 16px;
+  border-radius: 50%;
+  font-size: 22px;
+  line-height: 22px;
+  outline: none;
+
+  svg {
+    color: #fff;
+  }
 }
 
 </style>

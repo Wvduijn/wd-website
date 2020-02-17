@@ -4,7 +4,7 @@
         <ul class="menu">
             <li data-text="Home"><g-link to="/">Home</g-link></li>
             <li data-text="Blog"><g-link to="/blog">Blog</g-link></li>
-            <li data-text="Contact"><a href="#contact" title="Contact">Contact</a></li>
+            <li data-text="LinkedIN"><a href="https://www.linkedin.com/in/willemvanduijn/" title="LinkedIN" target="_blank">LinkedIN</a></li>
         </ul>
     </nav>
     </div> 

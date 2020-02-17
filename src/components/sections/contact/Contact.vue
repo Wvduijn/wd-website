@@ -1,8 +1,7 @@
 <template>
-<!-- #TODO: Seperate Input Field into seperate components -->
-  <Section class="wd-background">
+  <!-- #TODO: Seperate Input Field into seperate components -->
+  <Section class="wd-background" id="contact">
     <template v-slot:section-title>
-      <a name="Contact"></a> <!-- -->
       <title-block
         title="Samenwerken?"
         subtitle="vertel me meer over het project"
@@ -11,9 +10,9 @@
     <template v-slot:content>
       <div class="w-full md:w-3/4 p-10 pb-0 text-center">
         <p class="font-black">
-          Heeft u een interessante opdracht voor me welke aansluit bij mijn expertises?<br>
+          Heeft u een interessante opdracht voor me welke aansluit bij mijn
+          expertises?<br />
           Neem dan contact met me op via de chat of e-mail.
-          
         </p>
       </div>
       <div class="form-wrapper w-full md:w-3/4">
@@ -26,51 +25,110 @@
           data-netlify="true"
           data-netlify-honeypot="bot-field"
         >
-          <input
-            type="hidden"
-            name="form-name"
-            value="contact"
-          />
+          <input type="hidden" name="form-name" value="contact" />
           <p hidden>
             <label> Don’t fill this out: <input name="bot-field" /> </label>
           </p>
           <div class="sender-info">
-            <span class="input input--wd" :class="{'input--filled': formData.naam}">
-              <input class="input__field input__field--wd" type="text" id="naam" name="naam" v-model="formData.naam" />
+            <span
+              class="input input--wd"
+              :class="{ 'input--filled': formData.naam }"
+            >
+              <input
+                class="input__field input__field--wd"
+                :class="{'error' : $v.formData.naam.$error }"
+                type="text"
+                id="naam"
+                name="naam"
+                v-model="$v.formData.naam.$model"
+              />
               <label class="input__label input__label--wd" for="naam">
-                <span class="input__label-content input__label-content--wd" data-content="Naam">Naam</span>
+                <span
+                  class="input__label-content input__label-content--wd"
+                  data-content="Naam"
+                  >Naam</span
+                >
               </label>
-				    </span>
-            <span class="input input--wd" :class="{'input--filled': formData.email}">
-              <input class="input__field input__field--wd" type="text" id="email" name="email" v-model="formData.email" />
+              <p class="error" v-if="$v.formData.$dirty && $v.formData.naam.$invalid">
+                {{ usernameErrorMessage }}
+              </p>
+            </span>
+            <span
+              class="input input--wd"
+              :class="{ 'input--filled': formData.email }"
+            >
+              <input
+                class="input__field input__field--wd"
+                :class="{'error' : $v.formData.email.$error }"
+                type="text"
+                id="email"
+                name="email"
+                v-model="$v.formData.email.$model"
+              />
               <label class="input__label input__label--wd" for="email">
-                <span class="input__label-content input__label-content--wd" data-content="E-mail">E-mail</span>
+                <span
+                  class="input__label-content input__label-content--wd"
+                  data-content="E-mail"
+                  >E-mail</span
+                >
               </label>
-				    </span>
-            <span class="input input--wd" :class="{'input--filled': formData.phone}">
-              <input class="input__field input__field--wd" type="text" id="phone" name="phone" v-model="formData.phone" />
+              <p class="error" v-if="$v.formData.$dirty && $v.formData.email.$invalid">
+                {{ emailErrorMessage }}
+              </p>
+            </span>
+            <span
+              class="input input--wd"
+              :class="{ 'input--filled': formData.phone }"
+            >
+              <input
+                class="input__field input__field--wd"
+                :class="{'error' : $v.formData.phone.$error }"
+                type="text"
+                id="phone"
+                name="phone"
+                v-model="$v.formData.phone.$model"
+              />
               <label class="input__label input__label--wd" for="phone">
-                <span class="input__label-content input__label-content--wd" data-content="Telefoon">Telefoon</span>
+                <span
+                  class="input__label-content input__label-content--wd"
+                  data-content="Telefoon"
+                  >Telefoon</span
+                >
               </label>
-				    </span>
-            <span class="input input--wd" :class="{'input--filled': formData.comment}">
-              <textarea class="input__field input__field--wd" id="comment" name="comment" v-model="formData.comment" rows="4" />
+              <p class="error" v-if="$v.formData.$dirty && $v.formData.phone.$invalid">
+                {{ phoneErrorMessage }}
+              </p>
+            </span>
+            <span
+              class="input input--wd"
+              :class="{ 'input--filled': formData.comment }"
+            >
+              <textarea
+                class="input__field input__field--wd"
+                id="comment"
+                name="comment"
+                v-model="formData.comment"
+                rows="4"
+              />
               <label class="input__label input__label--wd" for="comment">
-                <span class="input__label-content input__label-content--wd" data-content="Omschrijving">Omschrijving</span>
+                <span
+                  class="input__label-content input__label-content--wd"
+                  data-content="Omschrijving"
+                  >Omschrijving</span
+                >
               </label>
-				    </span>
+            </span>
           </div>
-
-          <button
-            type="submit"
-            class="form-button uppercase float-shadow"
-          >kop koffie</button>
+          <button type="submit" class="form-button uppercase float-shadow">
+            kop koffie
+          </button>
         </form>
       </div>
       <div class="w-full md:w-3/4 text-center">
-      <h4>Ik ben beschikbaar per:</h4>
+        <h4>Ik ben beschikbaar per:</h4>
         <div class="email text-2xl">info@willemvanduijn.dev</div>
-        <div class="tel text-xl"> +31 6 83 90 92 34</div> <!-- +31 6 83 90 92 34 -->
+        <div class="tel text-xl">+316 op verzoek</div>
+        <!-- +31 6 83 90 92 34 -->
       </div>
     </template>
   </Section>
@@ -78,11 +136,62 @@
 <script>
 import TitleBlock from '~/components/title-block/TitleBlock.vue';
 import Section from '~/components/section/Section.vue';
+import { helpers, required, minLength } from 'vuelidate/lib/validators';
+
 export default {
+  name: 'ContactForm',
   data() {
     return {
+      errors: false,
+      empty: true,
+      invalid: true,
       formData: {}
     };
+  },
+  validations: {
+    formData: {
+      naam: {
+        required,
+        minLength: minLength(6)
+      },
+      email: {
+        required,
+        validEmail: value => {
+          return /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i.test(
+            value
+          );
+        }
+      },
+      phone: {
+        required,
+        validPhone: value => {
+          return /^(((\\+31|0|0031)6){1}[1-9]{1}[0-9]{7})$/i.test(value);
+        }
+      }
+    }
+  },
+  computed: {
+    usernameErrorMessage() {
+      if (!this.$v.formData.naam.required) {
+        return 'Naam is verplicht';
+      } else if (!this.$v.formData.naam.minLength) {
+        return 'Minimaal 6 karakters';
+      }
+    },
+    emailErrorMessage() {
+      if (!this.$v.formData.email.required) {
+        return 'Email is verplicht';
+      } else if (!this.$v.formData.email.validEmail) {
+        return 'Voer een geldig email adres in';
+      }
+    },
+    phoneErrorMessage() {
+      if (!this.$v.formData.phone.required) {
+        return 'Mobiel telefoon nummer is verplicht';
+      } else if (!this.$v.formData.email.validPhone) {
+        return 'Voer een geldig mobiel nummer in';
+      }
+    }
   },
   methods: {
     encode(data) {
@@ -92,23 +201,44 @@ export default {
         )
         .join('&');
     },
+    delayTouch($v) {
+      $v.$reset();
+      if (touchMap.has($v)) {
+        clearTimeout(touchMap.get($v));
+      }
+      touchMap.set($v, setTimeout($v.$touch, 1000));
+    },
     handleSubmit(e) {
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: this.encode({
-          'form-name': e.target.getAttribute('name'),
-          ...this.formData
+      this.$v.formData.$touch()
+      this.errors = this.$v.formData.$anyError;
+      this.formTouched = !this.$v.formData.$anyDirty;
+      this.invalid = !this.$v.formData.$anyDirty;
+
+      // Check if form isn't empty and doesn't contain any errors
+      if (
+        this.errors === false &&
+        this.formTouched === false &&
+        this.invalid === false
+      ) {
+        console.log('FORMDATA', this.formData);
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: this.encode({
+            'form-name': e.target.getAttribute('name'),
+            ...this.formData
+          })
         })
-      })
-        .then(() => {
-          // show Modal or Snackbar with thank you message
-          alert(
-            'Bedankt! Uw bericht werd succesvol verzonden. Ik zal zo spoedig mogelijk reageren.'
-          );
-          // this.$router.push('/success')
-        })
-        .catch(error => alert(error));
+          .then((response) => {
+            console.log(response);
+            // show Snackbar with thank you message
+            this.$toasted.success('&#10004;  Bedankt voor uw bericht! Ik zal z.s.m. reageren.');
+            // this.$router.push('/success')
+          })
+          .catch(error => alert(error));
+      } else {
+        this.$toasted.error('&#10005;  Voer a.u.b de benodigde velden in');
+      }
     }
   },
   components: {
@@ -134,10 +264,9 @@ h4 {
   letter-spacing: 4px;
 }
 .tel {
-  color: #FFF;
+  color: #fff;
   letter-spacing: 4px;
-  color: transparent;
-  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+  /* text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
 }
 
 .form-wrapper {
@@ -149,9 +278,6 @@ h4 {
       position: relative;
       z-index: 1;
       display: inline-block;
-      // margin: 1em;
-      // max-width: 350px;
-      // width: calc(100% - 2em);
       vertical-align: top;
     }
 
@@ -160,7 +286,6 @@ h4 {
       display: block;
       float: right;
       padding: 0.8em;
-      // width: 60%;
       border: none;
       border-radius: 0;
       background: #f0f0f0;
@@ -176,7 +301,6 @@ h4 {
 
     .input__label {
       display: inline-block;
-      // float: right;
       padding: 0 1em;
       width: 40%;
       color: #696969;
@@ -200,9 +324,15 @@ h4 {
     }
 
     .input--wd {
-      width:100%;
-	    padding-top: 1em;
-    }   
+      width: 100%;
+      padding-top: 1em;
+
+      .error {
+        color: red;
+        font-size: 0.75rem;
+        padding: 0;
+      }
+    }
 
     .input__field--wd {
       width: 100%;
@@ -212,6 +342,10 @@ h4 {
       color: #b5b5b5;
       -webkit-transition: border-color 0.25s;
       transition: border-color 0.25s;
+
+      &.error {
+        border-color: red;
+      }
     }
 
     .input__label--wd {
@@ -259,11 +393,13 @@ h4 {
     }
 
     @-webkit-keyframes anim-wd-1 {
-      0%, 70% {
+      0%,
+      70% {
         -webkit-transform: translate3d(0, 3em, 0);
         transform: translate3d(0, 3em, 0);
       }
-      71%, 100% {
+      71%,
+      100% {
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
       }
@@ -274,7 +410,8 @@ h4 {
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
       }
-      70%, 71% {
+      70%,
+      71% {
         -webkit-transform: translate3d(0, 125%, 0);
         transform: translate3d(0, 125%, 0);
         opacity: 0;
@@ -288,11 +425,13 @@ h4 {
     }
 
     @keyframes anim-wd-1 {
-      0%, 70% {
+      0%,
+      70% {
         -webkit-transform: translate3d(0, 3em, 0);
         transform: translate3d(0, 3em, 0);
       }
-      71%, 100% {
+      71%,
+      100% {
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
       }
@@ -303,7 +442,8 @@ h4 {
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
       }
-      70%, 71% {
+      70%,
+      71% {
         -webkit-transform: translate3d(0, 125%, 0);
         transform: translate3d(0, 125%, 0);
         opacity: 0;
@@ -318,28 +458,27 @@ h4 {
     // END CUSTOM ANIMATED FIELD
     .form-button {
       margin: 10px 0;
-      width:100%;
-      height:60px;
-      color: #FFF;
+      width: 100%;
+      height: 60px;
+      color: #fff;
       background: var(--orange-gradient);
 
       &:focus {
-        outline:none;
+        outline: none;
       }
     }
 
     // Default options
-    $defaultDuration: .3s;
+    $defaultDuration: 0.3s;
     $primaryColour: #ececec;
     $secondaryColour: #666;
-    $shadowColour: rgba(0, 0, 0, .6);
-
+    $shadowColour: rgba(0, 0, 0, 0.6);
 
     // As is often the case, some devices/browsers need additional code to get CSS to work
     // in the most desired way. These mixins are used to quickly drop in hacks for each element
     @mixin hideTapHighlightColor() {
       //Prevent highlight colour when element is tapped
-      -webkit-tap-highlight-color: rgba(0,0,0,0);
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
 
     @mixin hardwareAccel() {
@@ -373,7 +512,11 @@ h4 {
         height: 10px;
         width: 90%;
         opacity: 0;
-        background: radial-gradient(ellipse at center, rgba(0,0,0,.35) 0%,rgba(0,0,0,0) 80%); /* W3C */
+        background: radial-gradient(
+          ellipse at center,
+          rgba(0, 0, 0, 0.35) 0%,
+          rgba(0, 0, 0, 0) 80%
+        ); /* W3C */
         transition-duration: $defaultDuration;
         transition-property: transform opacity letter-spacing;
       }
@@ -383,7 +526,9 @@ h4 {
 
         &:before {
           opacity: 1;
-          transform: translateY(5px); /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+          transform: translateY(
+            5px
+          ); /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
         }
       }
     }

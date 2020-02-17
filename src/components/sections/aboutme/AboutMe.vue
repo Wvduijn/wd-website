@@ -14,7 +14,7 @@
         </p>
         <div v-html="$static.about.body"></div>
       </div>
-      <div class="w-full lg:w-1/3 h-46 relative align-wd">
+      <div class="w-full lg:w-1/3 h-46 flex justify-center align-wd">
           <div class="block lg:hidden"><g-image src="~/assets/images/willemvanduijn-hero.webp" /></div>
       </div>
     </template>

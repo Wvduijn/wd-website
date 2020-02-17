@@ -15,6 +15,7 @@
     <div class="footer__social">
 
       <a
+        href="https://github.com/Wvduijn"
         class="social-icon social-icon--github"
         title="Github"
         target="_blank"
@@ -23,6 +24,7 @@
       </a>
 
       <a
+        href="https://www.linkedin.com/in/willemvanduijn/"
         class="social-icon social-icon--linkedin"
         title="LinkedIn"
         target="_blank"
@@ -31,6 +33,7 @@
       </a>
 
       <a
+        href="https://twitter.com/wuls82"
         class="social-icon social-icon--twitter"
         title="Twitter"
         target="_blank"
@@ -39,6 +42,7 @@
       </a>
 
       <a
+        href="https://www.instagram.com/wuls82/"
         class="social-icon social-icon--instagram"
         title="Instagram"
         target="_blank"

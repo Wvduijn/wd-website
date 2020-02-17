@@ -8,19 +8,13 @@
     <!-- Clients Section -->
     <Clients />
 
-    <!-- Blog top 3 ? -->
+    <!-- #TODO: Blog top 3 ? -->
     
-
     <!-- Contact Section -->
     <Contact />
 
-    <!-- Author intro -->
-    <!-- <Author :show-title="true" /> -->
-
-    <!-- List posts -->
-    <!-- <div class="posts">
-      <PostCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
-    </div> -->
+    <!-- #TODO Personal card -->
+    
 
   </Layout>
 </template>

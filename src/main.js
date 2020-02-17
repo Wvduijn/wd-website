@@ -6,6 +6,9 @@ import 'highlight.js/styles/night-owl.css';
 import DefaultLayout from '~/layouts/Default.vue';
 import Fragment from 'vue-fragment';
 import BackToTop from 'vue-backtotop';
+import Toasted from 'vue-toasted';
+import Vuelidate from 'vuelidate';
+
 
 // Font awesome
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
@@ -16,13 +19,11 @@ import {
   faInstagram,
   faLinkedin
 } from '@fortawesome/free-brands-svg-icons';
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
-
+import { faChevronUp, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
-
 config.autoAddCss = false;
-library.add(faGithub, faTwitter, faInstagram, faLinkedin, faChevronUp);
+library.add(faGithub, faTwitter, faInstagram, faLinkedin, faChevronUp, faThumbsUp);
 
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 export default function(Vue, { router, head, isClient }) {
@@ -41,24 +42,38 @@ export default function(Vue, { router, head, isClient }) {
     href:
       'https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700,900&display=swap'
   });
-  
+
   // Check for home route to push script
   router.beforeEach((to, from, next) => {
     // to and from are both route objects.
-    if(to.name === 'home'){
+    if (to.name === 'home') {
       // Push animation script for homepage header
-      head.script.push({ src: '/js/particleAnim.js' });
+      head.script.push({
+        src: '/js/particleAnim.js'
+      });
     }
     next();
-  })
-  
+  });
+
   // Push Chat script
-  head.script.push({ src: '/js/chat.js' });
+  head.script.push({
+    src: '/js/chat.js'
+  });
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout);
   // FontAwesome
   Vue.component('font-awesome', FontAwesomeIcon);
   // Use Fragment Plugin
   Vue.use(Fragment.Plugin);
+  // Use BackToTop Plugin
   Vue.use(BackToTop);
+  // Use snackbar for succesfull form post
+  Vue.use(Toasted, {
+    duration: 2500,
+    position: 'bottom-center'
+  });
+
+  // Form validation
+  Vue.use(Vuelidate);
+  
 }

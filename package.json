@@ -14,16 +14,16 @@
     "@gridsome/source-filesystem": "^0.6.0",
     "@gridsome/transformer-remark": "^0.3.4",
     "gridsome": "^0.7.7",
-    "gridsome-plugin-netlify-cms": "^1.0.9",
     "gridsome-plugin-remark-prismjs-all": "^0.3.1",
     "highlight.js": "^9.18.1",
     "markdown-it": "^10.0.0",
-    "netlify-cms": "^2.9.7",
     "vue": "^2.6.10",
     "vue-backtotop": "^1.6.1",
     "vue-flickity": "^1.2.1",
     "vue-fragment": "^1.5.1",
-    "vue-loader": "^15.7.2"
+    "vue-loader": "^15.7.2",
+    "vue-toasted": "^1.1.27",
+    "vuelidate": "^0.7.5"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",

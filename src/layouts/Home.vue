@@ -23,7 +23,7 @@
 
       </main>
     </transition>
-
+    
   </div>
 </template>
 
