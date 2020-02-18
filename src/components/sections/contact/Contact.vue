@@ -36,7 +36,7 @@
             >
               <input
                 class="input__field input__field--wd"
-                :class="{'error' : $v.formData.naam.$error }"
+                :class="{'haserror' : $v.formData.naam.$error }"
                 type="text"
                 id="naam"
                 name="naam"
@@ -59,7 +59,7 @@
             >
               <input
                 class="input__field input__field--wd"
-                :class="{'error' : $v.formData.email.$error }"
+                :class="{'haserror' : $v.formData.email.$error }"
                 type="text"
                 id="email"
                 name="email"
@@ -82,7 +82,7 @@
             >
               <input
                 class="input__field input__field--wd"
-                :class="{'error' : $v.formData.phone.$error }"
+                :class="{'haserror' : $v.formData.phone.$error }"
                 type="text"
                 id="phone"
                 name="phone"
@@ -343,9 +343,6 @@ h4 {
       -webkit-transition: border-color 0.25s;
       transition: border-color 0.25s;
 
-      &.error {
-        border-color: red;
-      }
     }
 
     .input__label--wd {
