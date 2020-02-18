@@ -27,7 +27,7 @@
       </main>
     </transition>
     <ClientOnly>
-    <back-to-top bottom="100px" right="34px">
+    <back-to-top style="bottom: 100px; right: 34px;">
       <button type="button" class="btn btn-info btn-to-top"><font-awesome :icon="['fas', 'chevron-up']" /></i></button>
     </back-to-top>
     </ClientOnly>
