@@ -14,6 +14,9 @@ body {
   --orange: #ee751c;
   --dark-orange: #e63020;
   --color-accent: #006e90;
+  --section-bg: #2c5364;
+  --section-bg-dark: #0f2027;
+  --section-bg-light: #006e90;
   --color-accent-lighter: #adcad6;
   --text-color: #2b303a;
   --border-color: rgba(0, 0, 0, 0.1);
@@ -21,18 +24,14 @@ body {
   --content-width: 860px;
   --header-height: 80px;
   --radius: 5px;
+
   --main-gradient: linear-gradient(
-    260deg,
-    rgba(15, 32, 39, 1) 0%,
-    rgba(32, 58, 67, 1) 50%,
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 50%,
     rgba(44, 83, 100, 1) 100%
   );
-    --main-gradient-trans: linear-gradient(
-    260deg,
-    rgba(15, 32, 39, .4) 0%,
-    rgba(32, 58, 67, .4) 50%,
-    rgba(44, 83, 100, .4) 100%
-  );
+
   --orange-gradient: linear-gradient(
     50deg,
     rgba(230, 48, 32, 1) 0%,
@@ -40,8 +39,8 @@ body {
   );
   --orange-gradient-trans: linear-gradient(
     50deg,
-    rgba(230, 48, 32, .4) 0%,
-    rgba(238, 117, 28, .4) 100%
+    rgba(230, 48, 32, 0.4) 0%,
+    rgba(238, 117, 28, 0.4) 100%
   );
 }
 
@@ -65,4 +64,16 @@ body[data-theme='dark'] {
   --body-color: #ced8de;
   --title-color: #fff;
   --link-color: #ee751c;
+  --main-gradient-trans: linear-gradient(
+    260deg,
+    rgba(15, 32, 39, 0.4) 0%,
+    rgba(32, 58, 67, 0.4) 50%,
+    rgba(44, 83, 100, 0.4) 100%
+  );
+  --main-gradient: linear-gradient(
+    260deg,
+    rgba(15, 32, 39, 1) 0%,
+    rgba(32, 58, 67, 1) 50%,
+    rgba(44, 83, 100, 1) 100%
+  );
 }

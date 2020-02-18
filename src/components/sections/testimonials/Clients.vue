@@ -1,5 +1,5 @@
 <template>
-  <Section>
+  <Section class="dark-bg">
     <template v-slot:section-title>
       <title-block
         title="Wat zeggen opdrachtgevers"
@@ -55,6 +55,9 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.dark-bg {
+  background: var(--bg-color);
+}
 .clients {
   margin: 20px 0;
   border-radius: 20px;

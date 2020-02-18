@@ -10,7 +10,7 @@
 </template>
 <style lang="scss" scoped>
 .section{
-  background: var(--main-gradient);
-  // background: #0f2d44;
+  //background: var(--main-gradient);
+  background: var(--section-bg-dark);
 }
 </style>

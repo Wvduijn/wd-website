@@ -14,3 +14,7 @@
 ## URL
 
 https://willemvanduijn.dev/
+
+## Netlify Status
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bae74a84-97ac-44c6-8ebd-e699e40855f5/deploy-status)](https://app.netlify.com/sites/loving-raman-212edd/deploys)
