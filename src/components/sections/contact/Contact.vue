@@ -138,8 +138,10 @@ import TitleBlock from '~/components/title-block/TitleBlock.vue';
 import Section from '~/components/section/Section.vue';
 import { helpers, required, minLength } from 'vuelidate/lib/validators';
 
+
 export default {
   name: 'ContactForm',
+ 
   data() {
     return {
       errors: false,

@@ -6,9 +6,7 @@ import 'highlight.js/styles/night-owl.css';
 import DefaultLayout from '~/layouts/Default.vue';
 import Fragment from 'vue-fragment';
 import BackToTop from 'vue-backtotop';
-import Toasted from 'vue-toasted';
 import Vuelidate from 'vuelidate';
-
 
 // Font awesome
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
@@ -68,11 +66,17 @@ export default function(Vue, { router, head, isClient }) {
   // Use BackToTop Plugin
   Vue.use(BackToTop);
   // Use snackbar for succesfull form post
-  Vue.use(Toasted, {
-    duration: 2500,
-    position: 'bottom-center'
-  });
-
+  if (isClient) {
+    const Toasted = require('vue-toasted').default;
+    const BackToTop = require('vue-backtotop').default;
+    
+    Vue.use(BackToTop);
+    Vue.use(Toasted, {
+      duration: 2000,
+      position: 'bottom-center'
+    })
+  }
+  
   // Form validation
   Vue.use(Vuelidate);
   
