@@ -20,7 +20,14 @@ import { faChevronUp, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
 config.autoAddCss = false;
-library.add(faGithub, faTwitter, faInstagram, faLinkedin, faChevronUp, faThumbsUp);
+library.add(
+  faGithub,
+  faTwitter,
+  faInstagram,
+  faLinkedin,
+  faChevronUp,
+  faThumbsUp
+);
 
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 export default function(Vue, { router, head, isClient }) {
@@ -65,14 +72,14 @@ export default function(Vue, { router, head, isClient }) {
   // Use snackbar for succesfull form post
   if (isClient) {
     const Toasted = require('vue-toasted').default;
-    
+
     Vue.use(Toasted, {
       duration: 2000,
       position: 'bottom-center'
-    })
+    });
   }
-  
+
   // Form validation
   Vue.use(Vuelidate);
-  
+  // Enable infinite loading
 }

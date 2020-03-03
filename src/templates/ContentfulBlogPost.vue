@@ -55,12 +55,14 @@ hljs.registerLanguage('scss', scss);
 hljs.registerLanguage('dockerfile', dockerfile);
 hljs.registerLanguage('shell', shell);
 
+// Parse markdown to html
 import MarkdownIt from "markdown-it";
 import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
 import Author from '~/components/Author.vue'
 import BlogPostLayout from '~/layouts/BlogPost.vue'
 import BlogPostHero from '~/components/BlogPostHero.vue'
+
 
 export default {
   name: "Contentful",

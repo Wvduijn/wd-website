@@ -25,7 +25,9 @@
 
       </main>
     </transition>
-
+    <back-to-top>
+      <button type="button" class="btn btn-info btn-to-top"><font-awesome :icon="['fas', 'chevron-up']" /></i></button>
+    </back-to-top>
     <Footer />
 
   </div>
@@ -37,6 +39,8 @@ import ToggleTheme from '~/components/ToggleTheme.vue'
 import BlogHero from '~/components/BlogHero.vue'
 import Navigation from '~/components/navigation/Navigation.vue'
 import Footer from '~/components/footer/Footer.vue'
+import BackToTop from '~/components/ui-components/BackToTop.vue'
+
 
 
 export default {
@@ -48,7 +52,8 @@ export default {
     ToggleTheme,
     BlogHero,
     Navigation,
-    Footer
+    Footer,
+    BackToTop
   }
 }
 </script>

@@ -251,7 +251,10 @@ export default {
 </script>
 <style lang="scss" scoped>
 .wd-background {
-  background: url('~@/assets/images/codemachine.webp') center center no-repeat;
+  @media screen and (max-width: 1200px) {
+   background: var(--section-bg-dark);
+  }
+  background: var(--contact-bg);
   background-size: cover;
 }
 h4 {

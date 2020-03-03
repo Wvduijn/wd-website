@@ -27,7 +27,7 @@ export default {
 }
 .section-title {
   font-family: 'Poppins', sans-serif;
-  color: #FFF;
+  color: var(--title-color);
   letter-spacing: 1px;
   margin: 0 0 10px 0;
   text-transform: uppercase;

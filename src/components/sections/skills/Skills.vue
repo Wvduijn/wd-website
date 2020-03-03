@@ -233,6 +233,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .wd-background {
+  /* background: var(--section-bg-dark); */
   background: var(--main-gradient);
 }
 </style>
