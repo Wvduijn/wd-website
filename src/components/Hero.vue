@@ -1,8 +1,12 @@
 <template>
     <!--Hero-->
     <div class="wd-void-animation w-screen h-screen">
-        <div class="wd-logo">
-            <g-image src="~/assets/images/wd.svg" class="wd-logo__image" />
+        <div class="wd-logo" @click="startAnimation">
+            <g-image
+                src="~/assets/images/wd.svg"
+                class="wd-logo__image"
+                alt="WD - Front-end Developer"
+            />
         </div>
         <hero-title />
         <scroll-mouse />
@@ -17,8 +21,10 @@ export default {
         HeroTitle,
         ScrollMouse,
     },
-    mounted() {
-        createAnim()
+    methods: {
+        startAnimation() {
+            createAnim()
+        },
     },
 }
 </script>
@@ -28,10 +34,14 @@ export default {
     background: linear-gradient(90deg, #0f2027 0%, #203a43 53%, #2c5364 100%);
 }
 .wd-logo {
+    z-index: 1;
     width: 400px;
     position: absolute;
     top: calc(50% - 100px);
     left: calc(50% - 200px);
+    &:hover {
+        cursor: pointer;
+    }
 
     &__image {
         width: 100%;

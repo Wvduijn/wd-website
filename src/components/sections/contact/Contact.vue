@@ -8,157 +8,171 @@
             />
         </template>
         <template v-slot:content>
-            <div class="w-full md:w-3/4 p-10 pb-0 text-center">
+            <div class="w-full md:w-4/4 p-10 pb-0 text-center">
                 <p class="font-black">
                     Heeft u een interessante opdracht voor me welke aansluit bij
                     mijn expertises?<br />
                     Neem dan contact met me op via de chat of e-mail.
                 </p>
             </div>
-            <div class="form-wrapper w-full md:w-3/4">
-                <form
-                    class="contact-form p-5"
-                    name="contact"
-                    method="post"
-                    v-on:submit.prevent="handleSubmit"
-                    action="/success/"
-                    data-netlify="true"
-                    data-netlify-honeypot="bot-field"
-                >
-                    <input type="hidden" name="form-name" value="contact" />
-                    <p hidden>
-                        <label>
-                            Don’t fill this out: <input name="bot-field" />
-                        </label>
-                    </p>
-                    <div class="sender-info">
-                        <span
-                            class="input input--wd"
-                            :class="{ 'input--filled': formData.naam }"
-                        >
-                            <input
-                                class="input__field input__field--wd"
-                                :class="{ haserror: $v.formData.naam.$error }"
-                                type="text"
-                                id="naam"
-                                name="naam"
-                                v-model="$v.formData.naam.$model"
-                            />
-                            <label
-                                class="input__label input__label--wd"
-                                for="naam"
-                            >
-                                <span
-                                    class="input__label-content input__label-content--wd"
-                                    data-content="Naam"
-                                    >Naam</span
-                                >
-                            </label>
-                            <p
-                                class="error"
-                                v-if="
-                                    $v.formData.$dirty &&
-                                    $v.formData.naam.$invalid
-                                "
-                            >
-                                {{ usernameErrorMessage }}
-                            </p>
-                        </span>
-                        <span
-                            class="input input--wd"
-                            :class="{ 'input--filled': formData.email }"
-                        >
-                            <input
-                                class="input__field input__field--wd"
-                                :class="{ haserror: $v.formData.email.$error }"
-                                type="text"
-                                id="email"
-                                name="email"
-                                v-model="$v.formData.email.$model"
-                            />
-                            <label
-                                class="input__label input__label--wd"
-                                for="email"
-                            >
-                                <span
-                                    class="input__label-content input__label-content--wd"
-                                    data-content="E-mail"
-                                    >E-mail</span
-                                >
-                            </label>
-                            <p
-                                class="error"
-                                v-if="
-                                    $v.formData.$dirty &&
-                                    $v.formData.email.$invalid
-                                "
-                            >
-                                {{ emailErrorMessage }}
-                            </p>
-                        </span>
-                        <span
-                            class="input input--wd"
-                            :class="{ 'input--filled': formData.phone }"
-                        >
-                            <input
-                                class="input__field input__field--wd"
-                                :class="{ haserror: $v.formData.phone.$error }"
-                                type="text"
-                                id="phone"
-                                name="phone"
-                                v-model="$v.formData.phone.$model"
-                            />
-                            <label
-                                class="input__label input__label--wd"
-                                for="phone"
-                            >
-                                <span
-                                    class="input__label-content input__label-content--wd"
-                                    data-content="Telefoon"
-                                    >Telefoon</span
-                                >
-                            </label>
-                            <p
-                                class="error"
-                                v-if="
-                                    $v.formData.$dirty &&
-                                    $v.formData.phone.$invalid
-                                "
-                            >
-                                {{ phoneErrorMessage }}
-                            </p>
-                        </span>
-                        <span
-                            class="input input--wd"
-                            :class="{ 'input--filled': formData.comment }"
-                        >
-                            <textarea
-                                class="input__field input__field--wd"
-                                id="comment"
-                                name="comment"
-                                v-model="formData.comment"
-                                rows="4"
-                            />
-                            <label
-                                class="input__label input__label--wd"
-                                for="comment"
-                            >
-                                <span
-                                    class="input__label-content input__label-content--wd"
-                                    data-content="Omschrijving"
-                                    >Omschrijving</span
-                                >
-                            </label>
-                        </span>
-                    </div>
-                    <button
-                        type="submit"
-                        class="form-button uppercase float-shadow"
-                    >
-                        kop koffie
-                    </button>
-                </form>
+            <div class="w-full lg:w-3/4 flex justify-center">
+                <g-image src="~/assets/images/wd-contact.webp" alt="Contact" />
             </div>
+
+            <!-- FORM: #TODO Move form to seperate component -->
+            <div class="w-full lg:w-4/4 h-46 flex justify-center align-wd">
+                <div class="form-wrapper w-full md:w-3/4">
+                    <form
+                        class="contact-form p-5"
+                        name="contact"
+                        method="post"
+                        v-on:submit.prevent="handleSubmit"
+                        action="/success/"
+                        data-netlify="true"
+                        data-netlify-honeypot="bot-field"
+                    >
+                        <input type="hidden" name="form-name" value="contact" />
+                        <p hidden>
+                            <label>
+                                Don’t fill this out: <input name="bot-field" />
+                            </label>
+                        </p>
+                        <div class="sender-info">
+                            <span
+                                class="input input--wd"
+                                :class="{ 'input--filled': formData.naam }"
+                            >
+                                <input
+                                    class="input__field input__field--wd"
+                                    :class="{
+                                        haserror: $v.formData.naam.$error,
+                                    }"
+                                    type="text"
+                                    id="naam"
+                                    name="naam"
+                                    v-model="$v.formData.naam.$model"
+                                />
+                                <label
+                                    class="input__label input__label--wd"
+                                    for="naam"
+                                >
+                                    <span
+                                        class="input__label-content input__label-content--wd"
+                                        data-content="Naam"
+                                        >Naam</span
+                                    >
+                                </label>
+                                <p
+                                    class="error"
+                                    v-if="
+                                        $v.formData.$dirty &&
+                                        $v.formData.naam.$invalid
+                                    "
+                                >
+                                    {{ usernameErrorMessage }}
+                                </p>
+                            </span>
+                            <span
+                                class="input input--wd"
+                                :class="{ 'input--filled': formData.email }"
+                            >
+                                <input
+                                    class="input__field input__field--wd"
+                                    :class="{
+                                        haserror: $v.formData.email.$error,
+                                    }"
+                                    type="text"
+                                    id="email"
+                                    name="email"
+                                    v-model="$v.formData.email.$model"
+                                />
+                                <label
+                                    class="input__label input__label--wd"
+                                    for="email"
+                                >
+                                    <span
+                                        class="input__label-content input__label-content--wd"
+                                        data-content="E-mail"
+                                        >E-mail</span
+                                    >
+                                </label>
+                                <p
+                                    class="error"
+                                    v-if="
+                                        $v.formData.$dirty &&
+                                        $v.formData.email.$invalid
+                                    "
+                                >
+                                    {{ emailErrorMessage }}
+                                </p>
+                            </span>
+                            <span
+                                class="input input--wd"
+                                :class="{ 'input--filled': formData.phone }"
+                            >
+                                <input
+                                    class="input__field input__field--wd"
+                                    :class="{
+                                        haserror: $v.formData.phone.$error,
+                                    }"
+                                    type="text"
+                                    id="phone"
+                                    name="phone"
+                                    v-model="$v.formData.phone.$model"
+                                />
+                                <label
+                                    class="input__label input__label--wd"
+                                    for="phone"
+                                >
+                                    <span
+                                        class="input__label-content input__label-content--wd"
+                                        data-content="Telefoon"
+                                        >Telefoon</span
+                                    >
+                                </label>
+                                <p
+                                    class="error"
+                                    v-if="
+                                        $v.formData.$dirty &&
+                                        $v.formData.phone.$invalid
+                                    "
+                                >
+                                    {{ phoneErrorMessage }}
+                                </p>
+                            </span>
+                            <span
+                                class="input input--wd"
+                                :class="{ 'input--filled': formData.comment }"
+                            >
+                                <textarea
+                                    class="input__field input__field--wd"
+                                    id="comment"
+                                    name="comment"
+                                    v-model="formData.comment"
+                                    rows="4"
+                                />
+                                <label
+                                    class="input__label input__label--wd"
+                                    for="comment"
+                                >
+                                    <span
+                                        class="input__label-content input__label-content--wd"
+                                        data-content="Omschrijving"
+                                        >Omschrijving</span
+                                    >
+                                </label>
+                            </span>
+                        </div>
+                        <button
+                            type="submit"
+                            class="form-button uppercase float-shadow"
+                        >
+                            kop koffie
+                        </button>
+                    </form>
+                </div>
+            </div>
+
             <div class="w-full md:w-3/4 text-center">
                 <h4>
                     Ik ben beschikbaar voor kleine remote opdrachten (max. 8 uur
@@ -302,11 +316,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .wd-background {
-    @media screen and (max-width: 1200px) {
-        background: var(--section-bg-dark);
-    }
-    background: var(--contact-bg);
-    background-size: cover;
+    background: var(--main-gradient);
 }
 h4 {
     font-size: 1rem;
