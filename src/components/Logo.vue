@@ -1,10 +1,10 @@
 <template>
-	<g-link class="logo" to="/">
-	  <span class="logo__text">
-		 <g-image src="~/assets/images/wd.svg" width="70"/>
-	    <!-- &larr; {{ $static.metadata.siteName }} -->
-	  </span>
-	</g-link>
+    <g-link class="logo" to="/">
+        <span class="logo__text">
+            <g-image src="~/assets/images/wd.svg" width="70" />
+            <!-- &larr; {{ $static.metadata.siteName }} -->
+        </span>
+    </g-link>
 </template>
 
 <static-query>
@@ -17,13 +17,12 @@ query {
 
 <style lang="scss" scoped>
 .logo {
-
-	&__image {
-		vertical-align: middle;
-		border-radius: 99px;
-		height: 40px;
-		width: 40px;
-		margin-right: .5em;
-	}
+    &__image {
+        vertical-align: middle;
+        border-radius: 99px;
+        height: 40px;
+        width: 40px;
+        margin-right: 0.5em;
+    }
 }
 </style>

@@ -1,239 +1,145 @@
 <template>
-  <Section class="wd-background">
-    <template v-slot:section-title>
-      <title-block
-        title="Waarom mij inhuren?"
-        subtitle="HTML / SCSS • JAVASCRIPT • ANGULAR • VUE"
-      />
-    </template>
+    <Section class="wd-background">
+        <template v-slot:section-title>
+            <title-block
+                :title="$static.skillscontent.title"
+                :subtitle="$static.skillscontent.title"
+            />
+        </template>
 
-    <template v-slot:content>
-      <div class="w-full p-10">
-        <p class="font-black">
-            Door de jaren heen heb ik aan verscheidene Front-end projecten bij verscheidene organisaties gewerkt. Door de verscheidenheid aan projecten ook met een ruim scala aan technieken kunnen werken. Mijn voorkeur gaat uit naar het werken met de frameworks Angular &amp; Vue of StencilJS.
-        </p>
-        <p>
-            Ik ben gewend aan een agile werkomgeving (SCRUM) en aan het werken in autonome DevOps/Feature teams.
-            Doordat ik zelf zeer toegankelijk ben heb ik doorgaans weinig moeite om me aan te passen aan nieuwe omgevingen/teams.
-            Door mijn open persoonlijkheid vinden mensen het ook prettig om met me samen te werken.
-        </p>
-        <!-- SKILLS HERE: #TODO replace with v-for when dynamic path for g-image is available -->
-        <div class="skills-wrapper">
-
-          <h3 class="text-center">U kunt bij mij o.a. terecht voor:</h3>
-          <!-- Four columns -->
-          <div class="flex flex-wrap mb-4">
-
-            <div class="w-2/4 md:w-1/4">
-              <skill-card title="Angular">
-                <template v-slot:image>
-                  <g-image
-                    src="~/assets/images/dev-logos/angular.png"
-                    alt="Angular"
-                  />
-                </template>
-              </skill-card>
+        <template v-slot:content>
+            <div class="w-full p-10">
+                <p class="font-black">
+                    {{ $static.skillscontent.intro }}
+                </p>
+                <p>
+                    {{ $static.skillscontent.body }}
+                </p>
+                <!-- SKILLS HERE: #TODO replace with v-for when dynamic path for g-image is available -->
+                <div class="skills-wrapper">
+                    <h3 class="text-center">
+                        U kunt bij mij o.a. terecht voor:
+                    </h3>
+                    <!-- Four columns -->
+                    <div class="flex flex-wrap mb-4">
+                        <div
+                            class="w-2/4 md:w-1/4"
+                            v-for="(skill, index) in skills"
+                            :key="index"
+                        >
+                            <skill-card :title="skill.title">
+                                <template v-slot:image>
+                                    <g-image
+                                        :src="
+                                            require(`!!assets-loader!@devimages/${skill.imageurl}`)
+                                        "
+                                        :alt="skill.title"
+                                    />
+                                </template>
+                            </skill-card>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="w-2/4 md:w-1/4">
-              <skill-card title="Vue">
-                <template v-slot:image>
-                  <g-image
-                    src="~/assets/images/dev-logos/vue.png"
-                    alt="Vue"
-                  />
-                </template>
-              </skill-card>
-            </div>
-
-            <div class="w-2/4 md:w-1/4">
-              <skill-card title="Stencil">
-                <template v-slot:image>
-                  <g-image
-                    src="~/assets/images/dev-logos/stencil.png"
-                    alt="Stencil"
-                  />
-                </template>
-              </skill-card>
-            </div>
-
-            <div class="w-2/4 md:w-1/4">
-              <skill-card title="Javascript">
-                <template v-slot:image>
-                  <g-image
-                    src="~/assets/images/dev-logos/javascript-plain.png"
-                    alt="Vue"
-                  />
-                </template>
-              </skill-card>
-            </div>
-
-             <div class="w-2/4 md:w-1/4">
-              <skill-card title="Typescript">
-                <template v-slot:image>
-                  <g-image
-                    src="~/assets/images/dev-logos/typescript-plain.png"
-                    alt="Vue"
-                  />
-                </template>
-              </skill-card>
-            </div>
-
-            <div class="w-2/4 md:w-1/4">
-              <skill-card title="Html / (s)css">
-                <template v-slot:image>
-                  <g-image
-                    src="~/assets/images/dev-logos/html5.png"
-                    alt="Vue"
-                  />
-                </template>
-              </skill-card>
-            </div>
-
-            <div class="w-2/4 md:w-1/4">
-              <skill-card title="Sass">
-                <template v-slot:image>
-                  <g-image
-                    src="~/assets/images/dev-logos/sass.png"
-                    alt="Vue"
-                  />
-                </template>
-              </skill-card>
-            </div>
-
-            <div class="w-2/4 md:w-1/4">
-              <skill-card title="node">
-                <template v-slot:image>
-                  <g-image
-                    src="~/assets/images/dev-logos/node.png"
-                    alt="Vue"
-                  />
-                </template>
-              </skill-card>
-            </div>
-
-            <div class="w-2/4 md:w-1/4">
-              <skill-card title="GraphQL">
-                <template v-slot:image>
-                  <g-image
-                    src="~/assets/images/dev-logos/GraphQL_Logo.png"
-                    alt="GraphQL"
-                  />
-                </template>
-              </skill-card>
-            </div>
-
-            <div class="w-2/4 md:w-1/4">
-              <skill-card title="Apollo">
-                <template v-slot:image>
-                  <g-image
-                    src="~/assets/images/dev-logos/apollo.png"
-                    alt="Apollo"
-                  />
-                </template>
-              </skill-card>
-            </div>
-
-            <div class="w-2/4 md:w-1/4">
-              <skill-card title="Webpack">
-                <template v-slot:image>
-                  <g-image
-                    src="~/assets/images/dev-logos/webpack-original.png"
-                    alt="Webpack"
-                  />
-                </template>
-              </skill-card>
-            </div>
-
-            <div class="w-2/4 md:w-1/4">
-              <skill-card title="NPM">
-                <template v-slot:image>
-                  <g-image
-                    src="~/assets/images/dev-logos/npm-original-wordmark.png"
-                    alt="NPM"
-                  />
-                </template>
-              </skill-card>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-    </template>
-  </Section>
+        </template>
+    </Section>
 </template>
+<static-query>
+query {
+  skillscontent: contentfulSectionSkills(id:"6snq9TcFb5Yg9xj0XJAfrj"){
+  	body
+    intro
+    title
+    subtitle
+    id
+  }
+}
+</static-query>
 <script>
 import TitleBlock from '~/components/title-block/TitleBlock.vue'
 import Section from '~/components/section/Section.vue'
 import SkillCard from '~/components/ui-components/SkillCard.vue'
 export default {
-
-            computed: {
-                skills() {
-                    return [
-                        {
-                            title: "Angular",
-                            imageurl: require('!!assets-loader!~/assets/images/dev-logos/angular.png') 
-                        },
-                        {
-                            title: "Vue",
-                            imageurl: require('!!assets-loader!~/assets/images/dev-logos/vue.png') 
-                        },
-                        {
-                            title: "Stencil",
-                            imageurl: require('!!assets-loader!~/assets/images/dev-logos/vue.png') 
-                        },
-                        {
-                            title: "Javascript",
-                            imageurl: require('!!assets-loader!~/assets/images/dev-logos/vue.png') 
-                        },
-                        {
-                            title: "Typescript",
-                            imageurl: require('!!assets-loader!~/assets/images/dev-logos/vue.png') 
-                        },
-                        {
-                            title: "HTML / (S)CSS",
-                            imageurl: require('!!assets-loader!~/assets/images/dev-logos/vue.png') 
-                        },
-                        {
-                            title: "SASS",
-                            imageurl: require('!!assets-loader!~/assets/images/dev-logos/vue.png') 
-                        },
-                        {
-                            title: "Node",
-                            imageurl: require('!!assets-loader!~/assets/images/dev-logos/vue.png') 
-                        },
-                        {
-                            title: "GraphQL",
-                            imageurl: require('!!assets-loader!~/assets/images/dev-logos/vue.png') 
-                        },
-                        {
-                            title: "Apollo",
-                            imageurl: require('!!assets-loader!~/assets/images/dev-logos/vue.png') 
-                        },
-                        {
-                            title: "Webpack",
-                            imageurl: require('!!assets-loader!~/assets/images/dev-logos/vue.png') 
-                        },
-                        {
-                            title: "NPM",
-                            imageurl: require('!!assets-loader!~/assets/images/dev-logos/vue.png') 
-                        }
-                    ]
-                }
-        },
     components: {
         Section,
         TitleBlock,
-        SkillCard
+        SkillCard,
     },
-    
+    data: () => {
+        return {
+            skills: [
+                {
+                    title: 'Angular',
+                    imageurl: 'angular.png',
+                },
+                {
+                    title: 'Vue',
+                    imageurl: 'vue.png',
+                },
+                {
+                    title: 'Nuxt',
+                    imageurl: 'nuxt.png',
+                },
+                {
+                    title: 'Gridsome',
+                    imageurl: 'gridsome.png',
+                },
+                {
+                    title: 'Stencil',
+                    imageurl: 'stencil.png',
+                },
+                {
+                    title: 'Javascript',
+                    imageurl: 'javascript-plain.png',
+                },
+                {
+                    title: 'Typescript',
+                    imageurl: 'typescript-plain.png',
+                },
+                {
+                    title: 'HTML / (S)CSS',
+                    imageurl: 'html5.png',
+                },
+                {
+                    title: 'SASS',
+                    imageurl: 'sass.png',
+                },
+                {
+                    title: 'Tailwind CSS',
+                    imageurl: 'tailwind.png',
+                },
+                {
+                    title: 'Node',
+                    imageurl: 'node.png',
+                },
+                {
+                    title: 'GraphQL',
+                    imageurl: 'GraphQL_Logo.png',
+                },
+                {
+                    title: 'Apollo',
+                    imageurl: 'apollo.png',
+                },
+                {
+                    title: 'Webpack',
+                    imageurl: 'webpack-original.png',
+                },
+                {
+                    title: 'NPM',
+                    imageurl: 'npm-original-wordmark.png',
+                },
+                {
+                    title: 'JAMStack',
+                    imageurl: 'jamstack.png',
+                },
+            ],
+        }
+    },
 }
 </script>
 <style lang="scss" scoped>
 .wd-background {
-  /* background: var(--section-bg-dark); */
-  background: var(--main-gradient);
+    /* background: var(--section-bg-dark); */
+    background: var(--main-gradient);
 }
 </style>

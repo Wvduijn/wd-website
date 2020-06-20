@@ -1,8 +1,10 @@
 <template>
     <fragment>
-        <h2 class="section-title font-black text-3xl text-center">{{ title }}</h2>
+        <h2 class="section-title font-black text-3xl text-center">
+            {{ title }}
+        </h2>
         <h6 class="section-subtitle text-xs text-center">{{ subtitle }}</h6>
-        
+
         <div class="title-spacer"></div>
     </fragment>
 </template>
@@ -10,8 +12,8 @@
 export default {
     props: {
         title: String,
-        subtitle: String
-    }
+        subtitle: String,
+    },
 }
 </script>
 <style lang="scss" scoped>
@@ -26,17 +28,17 @@ export default {
     max-width: 130px;
 }
 .section-title {
-  font-family: 'Poppins', sans-serif;
-  color: var(--title-color);
-  letter-spacing: 1px;
-  margin: 0 0 10px 0;
-  text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    color: var(--title-color);
+    letter-spacing: 1px;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
 }
 .section-subtitle {
-  font-family: 'Roboto', sans-serif;
-  color: #ee751c;
-  letter-spacing: 4px;
-  margin: 0 0 20px 0;
-  text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    color: #ee751c;
+    letter-spacing: 4px;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
 }
 </style>

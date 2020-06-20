@@ -1,11 +1,12 @@
 # Website of Willem van Duijn - Front-end developer who loves to keep up to date with latest web technologies.
 
 > Personal website with Gridsome and Contentful for content.
+> Powered by Netlify
 
 ## Features
 
-- Beautiful and simple design.
-- Markdown or Contenful for content.
+- Simple and personal design.
+- Contenful for content.
 - Tags support.
 - Dark / Light toggle.
 - CSS variables, SCSS & BEM for styling.

@@ -1,14 +1,14 @@
 <template>
     <div class="skill">
         <div class="skill__image-wrap">
-        <div class="skill__image w-full flex justify-center">
-            <slot name="image" />
-        </div>
+            <div class="skill__image w-full flex justify-center">
+                <slot name="image" />
+            </div>
         </div>
         <h6 class="w-full block skill__title flex justify-center mt-5">
             {{ title }}
         </h6>
-    </div>    
+    </div>
 </template>
 <script>
 export default {
@@ -16,12 +16,12 @@ export default {
         // imageurl: {
         //     required: true,
         //     type: String,
-        // },    
+        // },
         title: {
             required: true,
             type: String,
-        }    
-    }
+        },
+    },
 }
 </script>
 <style lang="scss" scoped>
@@ -35,11 +35,11 @@ export default {
         justify-content: center;
         align-items: center;
     }
-   &__title{
-       font-family: 'Montserrat', sans-serif;
-       text-transform: uppercase;
-       font-size: .75em;
-       letter-spacing: 4px;
-   }
+    &__title {
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        font-size: 0.75em;
+        letter-spacing: 4px;
+    }
 }
 </style>
