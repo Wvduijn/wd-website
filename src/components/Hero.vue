@@ -9,12 +9,16 @@
     </div>
 </template>
 <script>
-import HeroTitle from './hero-title/HeroTitle'
+import createAnim from '@/assets/js/particleAnim'
 import ScrollMouse from '@/components/ui-components/ScrollMouse.vue'
+import HeroTitle from '@/components/hero-title/HeroTitle'
 export default {
     components: {
         HeroTitle,
         ScrollMouse,
+    },
+    mounted() {
+        createAnim()
     },
 }
 </script>

@@ -48,22 +48,18 @@ export default function (Vue, { router, head, isClient }) {
             'https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700,900&display=swap',
     })
 
-    // Check for home route to push script
-    router.beforeEach((to, from, next) => {
-        // to and from are both route objects.
-        if (to.name === 'home') {
-            // Push animation script for homepage header
-            head.script.push({
-                src: '/js/particleAnim.js',
-            })
-        }
-        next()
-    })
+    // Check for home route to push script - disabled >> load from component
+    // router.beforeEach((to, from, next) => {
+    //     // to and from are both route objects.
+    //     if (to.name === 'home') {
+    //         // Push animation script for homepage header
+    //         head.script.push({
+    //             src: '/js/chat.js',
+    //         })
+    //     }
+    //     next()
+    // })
 
-    // Push Chat script
-    head.script.push({
-        src: '/js/chat.js',
-    })
     // Set default layout as a global component
     Vue.component('Layout', DefaultLayout)
     // FontAwesome
