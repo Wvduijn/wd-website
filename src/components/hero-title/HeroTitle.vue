@@ -2,6 +2,13 @@
     <div class="py-20 absolute-center">
         <div class="hero-wrapper absolute-center text-center">
             <div class="hero-center">
+                <div class="wd-logo">
+                    <g-image
+                        src="~/assets/images/wd.svg"
+                        class="wd-logo__image"
+                        alt="WD - Front-end Developer"
+                    />
+                </div>
                 <h1 class="hero-title text-4xl uppercase font-semibold">
                     Willem van Duijn
                     <div class="title-spacer"></div>
@@ -24,11 +31,11 @@
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .hero-title {
-    margin-top: 20%;
     padding: 20px;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
@@ -56,5 +63,16 @@
     left: 0;
     bottom: 0;
     right: 0;
+}
+.wd-logo {
+    margin-top: 40px;
+    z-index: 1;
+    &:hover {
+        cursor: pointer;
+    }
+
+    &__image {
+        width: 100%;
+    }
 }
 </style>

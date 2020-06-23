@@ -1,3 +1,6 @@
+// Self host fonts using ==> https://github.com/KyleAMathews/typefaces
+require('typeface-poppins')
+require('typeface-montserrat')
 // Import main css
 import '~/assets/style/index.scss'
 import 'highlight.js/styles/night-owl.css'
@@ -33,11 +36,11 @@ library.add(
 export default function (Vue, { router, head, isClient }) {
     // Push custom Fonts
     //fonts.googleapis.com/css?family=Poppins:400
-    head.link.push({
-        rel: 'stylesheet',
-        href:
-            'https://fonts.googleapis.com/css?family=Poppins:400&display=swap',
-    })
+    // head.link.push({
+    //     rel: 'stylesheet',
+    //     href:
+    //         'https://fonts.googleapis.com/css?family=Poppins:400&display=swap',
+    // })
     // head.link.push({
     //     rel: 'stylesheet',
     //     href:
@@ -47,11 +50,11 @@ export default function (Vue, { router, head, isClient }) {
     //     rel: 'stylesheet',
     //     href: 'https://fonts.googleapis.com/css?family=Open+Sans&display=swap',
     // })
-    head.link.push({
-        rel: 'stylesheet',
-        href:
-            'https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700,900&display=swap',
-    })
+    // head.link.push({
+    //     rel: 'stylesheet',
+    //     href:
+    //         'https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700,900&display=swap',
+    // })
 
     // Check for home route to push script - disabled >> load from component
     // router.beforeEach((to, from, next) => {

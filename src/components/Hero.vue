@@ -1,14 +1,7 @@
 <template>
     <!--Hero-->
     <div class="wd-void-animation w-screen h-screen">
-        <div class="wd-logo" @click="startAnimation">
-            <g-image
-                src="~/assets/images/wd.svg"
-                class="wd-logo__image"
-                alt="WD - Front-end Developer"
-            />
-        </div>
-        <hero-title />
+        <hero-title @click="startAnimation" class="wd-logo" />
         <scroll-mouse />
     </div>
 </template>
@@ -30,21 +23,10 @@ export default {
 </script>
 <style lang="scss">
 .wd-void-animation {
-    margin-top: -80px;
+    margin-top: -60px;
     background: linear-gradient(90deg, #0f2027 0%, #203a43 53%, #2c5364 100%);
 }
-.wd-logo {
-    z-index: 1;
-    width: 400px;
-    position: absolute;
-    top: calc(50% - 100px);
-    left: calc(50% - 200px);
-    &:hover {
-        cursor: pointer;
-    }
-
-    &__image {
-        width: 100%;
-    }
+.wd-logo:hover {
+    cursor: pointer;
 }
 </style>

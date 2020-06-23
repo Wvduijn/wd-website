@@ -82,8 +82,13 @@ export default {
     cursor: pointer;
     position: fixed;
     z-index: 1000;
-    bottom: 100px;
+    bottom: 35px;
     right: 35px;
+
+    @include respond-below(sm) {
+        bottom: 10px;
+        right: 10px;
+    }
 }
 
 .vue-back-to-top .default {
