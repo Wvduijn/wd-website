@@ -28,7 +28,7 @@ export default {
     max-width: 130px;
 }
 .section-title {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: var(--title-color);
     letter-spacing: 1px;
     margin: 0 0 10px 0;

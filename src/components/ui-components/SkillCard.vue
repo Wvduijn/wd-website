@@ -36,7 +36,7 @@ export default {
         align-items: center;
     }
     &__title {
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Roboto', sans-serif;
         text-transform: uppercase;
         font-size: 0.75em;
         letter-spacing: 4px;

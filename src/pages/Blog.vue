@@ -8,12 +8,6 @@
                         :key="edge.node.id"
                         :post="edge.node"
                     />
-                    <!-- <PostCard
-					v-for="{ node } of loadedPosts"
-					:key="node.id"
-					:post="node"
-				/> -->
-                    <!-- <Pager :info="$page.posts.pageInfo"/> -->
                     <ClientOnly>
                         <infinite-loading
                             @infinite="infiniteHandler"
@@ -77,6 +71,15 @@ export default {
         PostCard,
         Section,
         InfiniteLoading: () => import('vue-infinite-loading'),
+    },
+    data() {
+        return {
+            loadedPosts: [],
+            currentPage: 1,
+        }
+    },
+    created() {
+        this.loadedPosts.push(...this.$page.posts.edges)
     },
     methods: {
         // Handler for infinite scroll

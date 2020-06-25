@@ -23,7 +23,7 @@ export default {
 </script>
 <style lang="scss">
 .wd-void-animation {
-    margin-top: -60px;
+    margin-top: -80px;
     background: linear-gradient(90deg, #0f2027 0%, #203a43 53%, #2c5364 100%);
 }
 .wd-logo:hover {
