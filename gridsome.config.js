@@ -3,6 +3,8 @@
 
 // Changes here requires a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+    .BundleAnalyzerPlugin
 module.exports = {
     siteName: 'Willem van Duijn - Front-end Developer',
     siteDescription:
@@ -81,5 +83,7 @@ module.exports = {
         config.resolve.alias.set('@style', '@/assets/style/')
         config.resolve.alias.set('@images', '@/assets/images/')
         config.resolve.alias.set('@devimages', '@/assets/images/dev-logos/')
+        config.plugin('BundleAnalyzerPlugin')
+        config.use(BundleAnalyzerPlugin, [{ analyzerMode: 'static' }])
     },
 }
