@@ -162,6 +162,6 @@ export default {
 }
 
 .post-author {
-    margin-top: calc(var(--space) / 2);
+    margin-top: var(--space);
 }
 </style>

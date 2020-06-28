@@ -1,7 +1,7 @@
 <template>
     <!--Hero-->
     <div class="wd-void-animation w-screen h-screen">
-        <hero-title @click="startAnimation" class="wd-logo" />
+        <hero-title @click.native="startAnimation" class="wd-logo" />
         <scroll-mouse />
     </div>
 </template>

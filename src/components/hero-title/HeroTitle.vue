@@ -67,6 +67,8 @@
 .wd-logo {
     margin-top: 40px;
     z-index: 1;
+    // added min-width for firefox
+    min-width: 300px;
     &:hover {
         cursor: pointer;
     }

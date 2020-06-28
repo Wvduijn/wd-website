@@ -34,7 +34,7 @@ export default {
 
 <style lang="scss" scoped>
 .author {
-    margin: 0 auto;
+    margin: 40px auto 0;
     max-width: 500px;
     text-align: center;
     padding-bottom: calc(var(--space) / 2);

@@ -26,8 +26,8 @@ export default {
         font-size: 0.8em;
         color: currentColor;
         text-decoration: none;
-        background-color: var(--color-accent);
-        color: currentColor !important; //Todo: remove important;
+        background-color: var(--bg-color);
+        color: var(--orange);
         padding: 0.5em;
         border-radius: var(--radius);
     }
