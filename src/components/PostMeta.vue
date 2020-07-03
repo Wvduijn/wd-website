@@ -1,6 +1,6 @@
 <template>
     <div class="post-meta">
-        Gepost op: {{ post.publishDate }}.
+        <strong>Gepost op:</strong> {{ post.publishDate }}.
         <template v-if="post.timeToRead">
             <strong>{{ post.timeToRead }} min read.</strong>
         </template>

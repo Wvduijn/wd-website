@@ -57,6 +57,17 @@ module.exports = {
                 ],
             },
         },
+        {
+            use: 'gridsome-plugin-manifest',
+            options: {
+                background_color: '#0d2538',
+                icon_path: './src/favicon.png',
+                name: 'WD - Front-end Developer',
+                short_name: 'WD',
+                theme_color: '#ee751c',
+                lang: 'en',
+            },
+        },
         // ENABLE ANALYTICS WHEN GOLIVE
         // {
         //     use: '@gridsome/plugin-google-analytics',

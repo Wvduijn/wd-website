@@ -520,6 +520,7 @@ h4 {
         }
         // END CUSTOM ANIMATED FIELD
         .form-button {
+            font-family: 'Roboto', sans-serif;
             margin: 10px 0;
             width: 100%;
             height: 60px;
@@ -528,71 +529,6 @@ h4 {
 
             &:focus {
                 outline: none;
-            }
-        }
-
-        // Default options
-        $defaultDuration: 0.3s;
-        $primaryColour: #ececec;
-        $secondaryColour: #666;
-        $shadowColour: rgba(0, 0, 0, 0.6);
-
-        // As is often the case, some devices/browsers need additional code to get CSS to work
-        // in the most desired way. These mixins are used to quickly drop in hacks for each element
-        @mixin hideTapHighlightColor() {
-            //Prevent highlight colour when element is tapped
-            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        }
-
-        @mixin hardwareAccel() {
-            //Improve performance on mobile/tablet devices
-            transform: translateZ(0);
-        }
-
-        @mixin improveAntiAlias() {
-            //Improve aliasing on mobile/tablet devices
-            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-        }
-
-        /* Float Shadow */
-        .float-shadow {
-            display: inline-block;
-            position: relative;
-            transition-duration: $defaultDuration;
-            transition-property: transform;
-
-            @include hideTapHighlightColor();
-            @include hardwareAccel();
-            @include improveAntiAlias();
-
-            &:before {
-                pointer-events: none;
-                position: absolute;
-                z-index: -1;
-                content: '';
-                top: 100%;
-                left: 5%;
-                height: 10px;
-                width: 90%;
-                opacity: 0;
-                background: radial-gradient(
-                    ellipse at center,
-                    rgba(0, 0, 0, 0.35) 0%,
-                    rgba(0, 0, 0, 0) 80%
-                ); /* W3C */
-                transition-duration: $defaultDuration;
-                transition-property: transform opacity letter-spacing;
-            }
-
-            &:hover {
-                transform: translateY(-5px); /* move the element up by 5px */
-
-                &:before {
-                    opacity: 1;
-                    transform: translateY(
-                        5px
-                    ); /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
-                }
             }
         }
 

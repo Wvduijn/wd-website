@@ -160,8 +160,4 @@ export default {
         display: none;
     }
 }
-
-.post-author {
-    margin-top: var(--space);
-}
 </style>

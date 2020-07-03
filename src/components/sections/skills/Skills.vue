@@ -15,28 +15,36 @@
                 <p>
                     {{ $static.skillscontent.body }}
                 </p>
-                <!-- SKILLS HERE: #TODO replace with v-for when dynamic path for g-image is available -->
                 <div class="skills-wrapper">
-                    <h3 class="text-center">
-                        U kunt bij mij o.a. terecht voor:
-                    </h3>
-                    <!-- Four columns -->
-                    <div class="flex flex-wrap mb-4">
-                        <div
-                            class="w-2/4 md:w-1/4"
-                            v-for="(skill, index) in skills"
-                            :key="index"
-                        >
-                            <skill-card :title="skill.title">
-                                <template v-slot:image>
-                                    <g-image
-                                        :src="
-                                            require(`!!assets-loader!@devimages/${skill.imageurl}`)
-                                        "
-                                        :alt="skill.title"
-                                    />
-                                </template>
-                            </skill-card>
+                    <button
+                        v-if="!showSkills"
+                        type="button"
+                        class="showskill-button float-shadow uppercase flex justify-center float-shadow"
+                        @click="toggleSkills()"
+                    >
+                        Waar kunt u bij mij voor terecht ?
+                    </button>
+                    <div v-if="showSkills">
+                        <h3 class="text-center">
+                            U kunt bij mij o.a. terecht voor:
+                        </h3>
+                        <div class="flex flex-wrap mb-4">
+                            <div
+                                class="w-2/4 md:w-1/4"
+                                v-for="(skill, index) in skills"
+                                :key="index"
+                            >
+                                <skill-card :title="skill.title">
+                                    <template v-slot:image>
+                                        <g-image
+                                            :src="
+                                                require(`!!assets-loader!@devimages/${skill.imageurl}`)
+                                            "
+                                            :alt="skill.title"
+                                        />
+                                    </template>
+                                </skill-card>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -67,6 +75,7 @@ export default {
     },
     data: () => {
         return {
+            showSkills: false,
             skills: [
                 {
                     title: 'Angular',
@@ -135,11 +144,32 @@ export default {
             ],
         }
     },
+    methods: {
+        toggleSkills() {
+            console.log('toggle skills')
+            this.showSkills = !this.showSkills
+            console.log(this.showSkills)
+        },
+    },
 }
 </script>
 <style lang="scss" scoped>
 .wd-background {
     /* background: var(--section-bg-dark); */
     background: var(--main-gradient);
+}
+.showskill-button {
+    font-size: 0.8rem;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    margin: 50px auto 0;
+    color: #fff;
+    background: var(--orange-gradient);
+    padding: 0.5rem 1rem;
+
+    &:focus {
+        outline: none;
+    }
 }
 </style>
