@@ -22,7 +22,7 @@
             <!-- FORM: #TODO Move form to seperate component -->
             <div class="w-full lg:w-4/4 h-46 flex justify-center align-wd">
                 <div class="form-wrapper w-full md:w-3/4">
-                    <!-- <form
+                    <form
                         class="contact-form p-5"
                         name="contact"
                         method="post"
@@ -169,7 +169,7 @@
                         >
                             kop koffie
                         </button>
-                    </form> -->
+                    </form>
                 </div>
             </div>
 

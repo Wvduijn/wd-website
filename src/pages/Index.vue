@@ -3,9 +3,9 @@
         <!-- Over mij Section -->
         <AboutMe />
         <!-- Skills Section -->
-        <Skills />
+        <!-- <Skills /> -->
         <!-- Clients Section -->
-        <Clients />
+        <!-- <Clients /> -->
         <!-- Contact Section -->
         <Contact />
         <!-- #TODO: Blog top 3 ? -->
@@ -25,9 +25,9 @@ import RecentPosts from '~/components/sections/recent-posts/RecentPosts.vue'
 export default {
     components: {
         AboutMe,
-        Skills,
+        // Skills,
         Contact,
-        Clients,
+        // Clients,
         RecentPosts,
     },
     metaInfo: {
