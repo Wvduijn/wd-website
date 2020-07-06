@@ -1,13 +1,13 @@
 <template>
     <Layout :show-logo="true">
         <!-- Over mij Section -->
-        <AboutMe />
+        <!-- <AboutMe /> -->
         <!-- Skills Section -->
         <!-- <Skills /> -->
         <!-- Clients Section -->
         <!-- <Clients /> -->
         <!-- Contact Section -->
-        <Contact />
+        <!-- <Contact /> -->
         <!-- #TODO: Blog top 3 ? -->
         <RecentPosts />
         <!-- #TODO Personal card -->
@@ -24,9 +24,9 @@ import RecentPosts from '~/components/sections/recent-posts/RecentPosts.vue'
 
 export default {
     components: {
-        AboutMe,
+        // AboutMe,
         // Skills,
-        Contact,
+        // Contact,
         // Clients,
         RecentPosts,
     },
