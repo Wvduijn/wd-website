@@ -3,7 +3,7 @@
         <!-- Over mij Section -->
         <AboutMe />
         <!-- Skills Section -->
-        <!-- <Skills /> -->
+        <Skills />
         <!-- Clients Section -->
         <!-- <Clients /> -->
         <!-- Contact Section -->
@@ -25,7 +25,7 @@ import RecentPosts from '~/components/sections/recent-posts/RecentPosts.vue'
 export default {
     components: {
         AboutMe,
-        // Skills,
+        Skills,
         // Contact,
         // Clients,
         RecentPosts,
