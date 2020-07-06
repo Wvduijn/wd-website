@@ -16,11 +16,11 @@
                 <slot />
             </main>
         </transition>
-        <!-- <back-to-top>
+        <back-to-top>
             <button type="button" class="btn btn-info btn-to-top">
                 <font-awesome :icon="['fas', 'chevron-up']" />
             </button>
-        </back-to-top> -->
+        </back-to-top>
         <Footer />
     </div>
 </template>
