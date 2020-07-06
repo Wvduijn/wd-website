@@ -5,7 +5,7 @@
                 <slot name="image" />
             </div>
         </div>
-        <h6 class="w-full block skill__title flex justify-center mt-5">
+        <h6 class="w-full skill__title flex justify-center mt-5">
             {{ title }}
         </h6>
     </div>

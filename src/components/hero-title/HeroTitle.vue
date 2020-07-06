@@ -11,12 +11,12 @@
                 </div>
                 <h1 class="hero-title text-4xl uppercase font-semibold">
                     Willem van Duijn
-                    <div class="title-spacer"></div>
+                    <span class="title-spacer"></span>
                     <span
                         class="block uppercase font-thin tracking-wider text-3xl"
                         >Front-end Developer</span
                     >
-                    <div class="title-spacer"></div>
+                    <span class="title-spacer"></span>
                     <span
                         class="block uppercase font-thin tracking-wider font-bold text-sm"
                         >websites & webapps met het oog op performance</span
