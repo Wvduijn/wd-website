@@ -1,7 +1,7 @@
 <template>
     <Layout :show-logo="true">
         <!-- Over mij Section -->
-        <!-- <AboutMe /> -->
+        <AboutMe />
         <!-- Skills Section -->
         <!-- <Skills /> -->
         <!-- Clients Section -->
