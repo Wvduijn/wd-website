@@ -24,7 +24,7 @@ import RecentPosts from '~/components/sections/recent-posts/RecentPosts.vue'
 
 export default {
     components: {
-        // AboutMe,
+        AboutMe,
         // Skills,
         // Contact,
         // Clients,
