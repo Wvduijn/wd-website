@@ -57,6 +57,7 @@ module.exports = {
                 ],
             },
         },
+        // PWA integration
         {
             use: 'gridsome-plugin-manifest',
             options: {
@@ -66,6 +67,18 @@ module.exports = {
                 short_name: 'WD',
                 theme_color: '#ee751c',
                 lang: 'en',
+            },
+        },
+        {
+            use: 'gridsome-plugin-service-worker',
+            options: {
+                networkFirst: {
+                    cacheName: 'nf-v1',
+                    routes: [
+                        '/',
+                        /\.(js|css|png|webp|svg)$/, // means "every JS, CSS, and PNG images"
+                    ],
+                },
             },
         },
         // ENABLE ANALYTICS WHEN GOLIVE

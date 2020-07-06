@@ -43,6 +43,7 @@
     color: #f9f9f9;
 }
 .title-spacer {
+    display: block;
     border: 0 solid #e7e6e6;
     border-color: #f9f9f9;
     border-top-width: 1px;

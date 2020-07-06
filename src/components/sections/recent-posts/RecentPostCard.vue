@@ -9,7 +9,7 @@
             />
         </div>
         <div class="post-card__content">
-            <h2 class="post-card__title" v-html="post.title" />
+            <h2 class="post-card__title">{{ post.title }}</h2>
             <PostMeta class="post-card__meta" :post="post" />
             <PostTags class="post-card__tags" :post="post" />
 
