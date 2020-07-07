@@ -22,7 +22,7 @@
             </div>
 
             <!-- FORM: #TODO Move form to seperate component -->
-            <div class="w-full lg:w-4/4 h-46 flex justify-center align-wd">
+            <!-- <div class="w-full lg:w-4/4 h-46 flex justify-center align-wd">
                 <div class="form-wrapper w-full md:w-3/4">
                     <form
                         class="contact-form p-5"
@@ -177,7 +177,7 @@
                         </button>
                     </form>
                 </div>
-            </div>
+            </div> -->
 
             <div class="w-full md:w-3/4 text-center">
                 <h4>
