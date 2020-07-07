@@ -1,8 +1,8 @@
 <template>
-    <fragment>
+    <div>
         <MenuToggle :open="this.open" @click.native="toggleMenu" />
         <Menu :open="this.open" :closed="this.closed" />
-    </fragment>
+    </div>
 </template>
 <script>
 import MenuToggle from './menu-toggle/MenuToggle'

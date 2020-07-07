@@ -18,7 +18,6 @@
                 <div class="skills-wrapper">
                     <button
                         v-if="!showSkills"
-                        type="button"
                         class="showskill-button float-shadow uppercase flex justify-center float-shadow"
                         @click="toggleSkills()"
                     >
@@ -146,16 +145,13 @@ export default {
     },
     methods: {
         toggleSkills() {
-            console.log('toggle skills')
             this.showSkills = !this.showSkills
-            console.log(this.showSkills)
         },
     },
 }
 </script>
 <style lang="scss" scoped>
 .wd-background {
-    /* background: var(--section-bg-dark); */
     background: var(--main-gradient);
 }
 .showskill-button {

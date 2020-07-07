@@ -1,12 +1,12 @@
 <template>
-    <fragment>
+    <div class="title-wrapper">
         <h2 class="section-title font-black text-3xl text-center">
             {{ title }}
         </h2>
         <h6 class="section-subtitle text-xs text-center">{{ subtitle }}</h6>
 
         <div class="title-spacer"></div>
-    </fragment>
+    </div>
 </template>
 <script>
 export default {

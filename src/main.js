@@ -6,7 +6,6 @@ import 'highlight.js/styles/night-owl.css'
 
 // Import default layout so we don't need to import it to every page
 import DefaultLayout from '~/layouts/Default.vue'
-import Fragment from 'vue-fragment'
 import Vuelidate from 'vuelidate'
 
 // Font awesome
@@ -49,8 +48,6 @@ export default function (Vue, { router, head, isClient }) {
     Vue.component('Layout', DefaultLayout)
     // FontAwesome
     Vue.component('font-awesome', FontAwesomeIcon)
-    // Use Fragment Plugin
-    Vue.use(Fragment.Plugin)
     // Use snackbar for succesfull form post
     if (isClient) {
         const Toasted = require('vue-toasted').default

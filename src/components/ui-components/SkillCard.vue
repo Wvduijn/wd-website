@@ -13,10 +13,6 @@
 <script>
 export default {
     props: {
-        // imageurl: {
-        //     required: true,
-        //     type: String,
-        // },
         title: {
             required: true,
             type: String,

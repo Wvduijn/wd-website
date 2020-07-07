@@ -5,9 +5,9 @@
         <!-- Skills Section -->
         <Skills />
         <!-- Clients Section -->
-        <!-- <Clients /> -->
+        <Clients />
         <!-- Contact Section -->
-        <!-- <Contact /> -->
+        <Contact />
         <!-- #TODO: Blog top 3 ? -->
         <RecentPosts />
         <!-- #TODO Personal card -->
@@ -26,8 +26,8 @@ export default {
     components: {
         AboutMe,
         Skills,
-        // Contact,
-        // Clients,
+        Contact,
+        Clients,
         RecentPosts,
     },
     metaInfo: {
