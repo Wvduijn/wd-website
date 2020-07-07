@@ -11,7 +11,9 @@
             <div class="w-full md:w-4/4 p-10 pb-0 text-center">
                 <p class="font-black">
                     Heeft u een interessante opdracht voor me welke aansluit bij
-                    mijn expertises?<br />
+                    mijn expertises?
+                </p>
+                <p>
                     Neem dan contact met me op via de chat of e-mail.
                 </p>
             </div>
@@ -24,21 +26,25 @@
                 <div class="form-wrapper w-full md:w-3/4">
                     <form
                         class="contact-form p-5"
-                        name="contact"
+                        name="contact-form"
                         method="post"
                         v-on:submit.prevent="handleSubmit"
                         action="/success/"
                         data-netlify="true"
                         data-netlify-honeypot="bot-field"
                     >
-                        <input type="hidden" name="form-name" value="contact" />
+                        <input
+                            type="hidden"
+                            name="form-name"
+                            value="contact-form"
+                        />
                         <p hidden>
                             <label>
                                 Don’t fill this out: <input name="bot-field" />
                             </label>
                         </p>
                         <div class="sender-info">
-                            <span
+                            <div
                                 class="input input--wd"
                                 :class="{ 'input--filled': formData.naam }"
                             >
@@ -71,8 +77,8 @@
                                 >
                                     {{ usernameErrorMessage }}
                                 </p>
-                            </span>
-                            <span
+                            </div>
+                            <div
                                 class="input input--wd"
                                 :class="{ 'input--filled': formData.email }"
                             >
@@ -105,8 +111,8 @@
                                 >
                                     {{ emailErrorMessage }}
                                 </p>
-                            </span>
-                            <span
+                            </div>
+                            <div
                                 class="input input--wd"
                                 :class="{ 'input--filled': formData.phone }"
                             >
@@ -139,8 +145,8 @@
                                 >
                                     {{ phoneErrorMessage }}
                                 </p>
-                            </span>
-                            <span
+                            </div>
+                            <div
                                 class="input input--wd"
                                 :class="{ 'input--filled': formData.comment }"
                             >
@@ -161,7 +167,7 @@
                                         >Omschrijving</span
                                     >
                                 </label>
-                            </span>
+                            </div>
                         </div>
                         <button
                             type="submit"
