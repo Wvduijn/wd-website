@@ -10,7 +10,7 @@
                 <ToggleTheme />
             </div>
         </header>
-        <!-- <Hero /> -->
+        <Hero />
         <transition name="fade" appear mode="out-in">
             <main class="main">
                 <slot />

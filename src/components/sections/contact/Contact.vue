@@ -22,7 +22,7 @@
             </div>
 
             <!-- FORM: #TODO Move form to seperate component -->
-            <!-- <div class="w-full lg:w-4/4 h-46 flex justify-center align-wd">
+            <div class="w-full lg:w-4/4 h-46 flex justify-center align-wd">
                 <div class="form-wrapper w-full md:w-3/4">
                     <form
                         class="contact-form p-5"
@@ -85,7 +85,7 @@
                                 <input
                                     class="input__field input__field--wd"
                                     :class="{
-                                        haserror: $v.formData.email.$error,
+                                        haserror : $v.formData.email.$error,
                                     }"
                                     type="text"
                                     id="email"
@@ -177,7 +177,7 @@
                         </button>
                     </form>
                 </div>
-            </div> -->
+            </div>
 
             <div class="w-full md:w-3/4 text-center">
                 <h4>
