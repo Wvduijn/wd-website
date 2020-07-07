@@ -3,9 +3,9 @@
         <!-- Over mij Section -->
         <AboutMe />
         <!-- Skills Section -->
-        <!-- <Skills /> -->
+        <Skills />
         <!-- Clients Section -->
-        <Clients />
+        <!-- <Clients /> -->
         <!-- Contact Section -->
         <Contact />
         <!-- #TODO: Blog top 3 ? -->
