@@ -3,7 +3,7 @@
         <!-- Over mij Section -->
         <AboutMe />
         <!-- Skills Section -->
-        <Skills />
+        <!-- <Skills /> -->
         <!-- Clients Section -->
         <Clients />
         <!-- Contact Section -->

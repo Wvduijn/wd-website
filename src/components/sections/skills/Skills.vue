@@ -19,7 +19,7 @@
                 <h3 class="text-center">
                     U kunt bij mij o.a. terecht voor:
                 </h3>
-                <!-- <div class="flex flex-wrap mb-4">
+                <div class="flex flex-wrap mb-4">
                     <div
                         class="w-2/4 md:w-1/4"
                         v-for="(skill, index) in skills"
@@ -36,7 +36,7 @@
                             </template>
                         </skill-card>
                     </div>
-                </div> -->
+                </div>
             </div>
         </template>
     </Section>
