@@ -31,23 +31,22 @@
                         v-on:submit.prevent="handleSubmit"
                         action="/success/"
                         data-netlify="true"
-                        data-netlify-honeypot="bot-field"
                     >
                         <input
                             type="hidden"
                             name="form-name"
                             value="contact-form"
                         />
-                        <p hidden>
+                        <!-- <p hidden>
                             <label>
                                 Don’t fill this out: <input name="bot-field" />
                             </label>
-                        </p>
+                        </p> -->
                         <div class="sender-info">
-                            <!-- <div
+                            <div
                                 class="input input--wd"
                                 :class="{ 'input--filled': formData.naam }"
-                            > -->
+                            >
                                 <input
                                     class="input__field input__field--wd"
                                     :class="{
@@ -57,20 +56,18 @@
                                     id="naam"
                                     name="naam"
                                     v-model="$v.formData.naam.$model"
-                                    placeholder="Naam"
                                 />
                                 <label
                                     class="input__label input__label--wd"
                                     for="naam"
                                 >
-                                    <!-- <span
+                                    <span
                                         class="input__label-content input__label-content--wd"
                                         data-content="Naam"
                                         >Naam</span
-                                    > -->
-                                    Naam
+                                    >
                                 </label>
-                                <p
+                                <!-- <p
                                     class="error"
                                     v-if="
                                         $v.formData.$dirty &&
@@ -78,8 +75,8 @@
                                     "
                                 >
                                     {{ usernameErrorMessage }}
-                                </p>
-                            <!-- </div> -->
+                                </p> -->
+                            </div>
                             <!-- <div
                                 class="input input--wd"
                                 :class="{ 'input--filled': formData.email }"
