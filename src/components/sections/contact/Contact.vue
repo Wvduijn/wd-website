@@ -1,6 +1,5 @@
 <template>
-    <!-- #TODO: Seperate Input Field into seperate components -->
-    <Section class="wd-background" id="contact">
+    <Section class="wd-background">
         <template v-slot:section-title>
             <title-block
                 title="Samenwerken?"
@@ -21,7 +20,6 @@
                 <g-image src="~/assets/images/wd-contact.webp" alt="Contact" />
             </div>
 
-            <!-- FORM: #TODO Move form to seperate component -->
             <div class="w-full lg:w-4/4 h-46 flex justify-center align-wd">
                 <div class="form-wrapper w-full md:w-3/4">
                     <form
@@ -67,7 +65,7 @@
                                         >Naam</span
                                     >
                                 </label>
-                                <!-- <p
+                                <p
                                     class="error"
                                     v-if="
                                         $v.formData.$dirty &&
@@ -75,9 +73,9 @@
                                     "
                                 >
                                     {{ usernameErrorMessage }}
-                                </p> -->
+                                </p>
                             </div>
-                            <!-- <div
+                            <div
                                 class="input input--wd"
                                 :class="{ 'input--filled': formData.email }"
                             >
@@ -166,7 +164,7 @@
                                         >Omschrijving</span
                                     >
                                 </label>
-                            </div> -->
+                            </div>
                         </div>
                         <button
                             type="submit"
@@ -185,7 +183,6 @@
                 </h4>
                 <div class="email text-2xl">info@willemvanduijn.dev</div>
                 <div class="tel text-xl">+316 op verzoek</div>
-                <!-- +31 6 83 90 92 34 -->
             </div>
         </template>
     </Section>
@@ -196,7 +193,7 @@ import Section from '~/components/section/Section.vue'
 import { helpers, required, minLength } from 'vuelidate/lib/validators'
 
 export default {
-    name: 'ContactForm',
+    name: 'Contact',
 
     data() {
         return {
