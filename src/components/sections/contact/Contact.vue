@@ -78,7 +78,7 @@
                                     {{ usernameErrorMessage }}
                                 </p>
                             </div>
-                            <div
+                            <!-- <div
                                 class="input input--wd"
                                 :class="{ 'input--filled': formData.email }"
                             >
@@ -167,7 +167,7 @@
                                         >Omschrijving</span
                                     >
                                 </label>
-                            </div>
+                            </div> -->
                         </div>
                         <button
                             type="submit"
