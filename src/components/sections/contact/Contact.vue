@@ -66,15 +66,17 @@
                                         >Naam</span
                                     >
                                 </label>
-                                <!-- <p
-                                    class="error"
-                                    v-if="
-                                        $v.formData.$dirty &&
-                                        $v.formData.naam.$invalid
-                                    "
-                                >
-                                    {{ usernameErrorMessage }}
-                                </p> -->
+                                <ClientOnly>
+                                    <p
+                                        class="error"
+                                        v-if="
+                                            $v.formData.$dirty &&
+                                            $v.formData.naam.$invalid
+                                        "
+                                    >
+                                        {{ usernameErrorMessage }}
+                                    </p>
+                                </ClientOnly>
                             </div>
                             <!-- <div
                                 class="input input--wd"
