@@ -66,18 +66,16 @@
                                         >Naam</span
                                     >
                                 </label>
-                                <ClientOnly>
-                                    <p
-                                        class="error"
-                                        v-show="
-                                            $v.formData.$dirty &&
-                                            $v.formData.naam.$invalid
-                                        "
-                                    >
-                                        {{ usernameErrorMessage }}
-                                    </p>
-                                </ClientOnly>
                             </div>
+                            <p
+                                class="error"
+                                v-if="
+                                    $v.formData.$dirty &&
+                                    $v.formData.naam.$invalid
+                                "
+                            >
+                                {{ usernameErrorMessage }}
+                            </p>
                             <!-- <div
                                 class="input input--wd"
                                 :class="{ 'input--filled': formData.email }"
