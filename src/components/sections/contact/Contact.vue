@@ -69,7 +69,7 @@
                                 <ClientOnly>
                                     <p
                                         class="error"
-                                        v-if="
+                                        v-show="
                                             $v.formData.$dirty &&
                                             $v.formData.naam.$invalid
                                         "
