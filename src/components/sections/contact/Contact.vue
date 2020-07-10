@@ -66,16 +66,17 @@
                                         >Naam</span
                                     >
                                 </label>
+
+                                <!-- <p
+                                    class="error"
+                                    v-if="
+                                        $v.formData.$dirty &&
+                                        $v.formData.naam.$invalid
+                                    "
+                                >
+                                    {{ usernameErrorMessage }}
+                                </p> -->
                             </div>
-                            <p
-                                class="error"
-                                v-if="
-                                    $v.formData.$dirty &&
-                                    $v.formData.naam.$invalid
-                                "
-                            >
-                                {{ usernameErrorMessage }}
-                            </p>
                             <!-- <div
                                 class="input input--wd"
                                 :class="{ 'input--filled': formData.email }"
