@@ -66,25 +66,24 @@
                                         >Naam</span
                                     >
                                 </label>
-
-                                <!-- <p
-                                    class="error"
-                                    v-if="
-                                        $v.formData.$dirty &&
-                                        $v.formData.naam.$invalid
-                                    "
-                                >
-                                    {{ usernameErrorMessage }}
-                                </p> -->
                             </div>
-                            <!-- <div
+                            <div
+                                class="error"
+                                v-if="
+                                    $v.formData.$dirty &&
+                                    $v.formData.naam.$invalid
+                                "
+                            >
+                                {{ usernameErrorMessage }}
+                            </div>
+                            <div
                                 class="input input--wd"
                                 :class="{ 'input--filled': formData.email }"
                             >
                                 <input
                                     class="input__field input__field--wd"
                                     :class="{
-                                        haserror : $v.formData.email.$error,
+                                        haserror: $v.formData.email.$error,
                                     }"
                                     type="text"
                                     id="email"
@@ -101,15 +100,15 @@
                                         >E-mail</span
                                     >
                                 </label>
-                                <p
-                                    class="error"
-                                    v-if="
-                                        $v.formData.$dirty &&
-                                        $v.formData.email.$invalid
-                                    "
-                                >
-                                    {{ emailErrorMessage }}
-                                </p>
+                            </div>
+                            <div
+                                class="error"
+                                v-if="
+                                    $v.formData.$dirty &&
+                                    $v.formData.email.$invalid
+                                "
+                            >
+                                {{ emailErrorMessage }}
                             </div>
                             <div
                                 class="input input--wd"
@@ -135,15 +134,15 @@
                                         >Telefoon</span
                                     >
                                 </label>
-                                <p
-                                    class="error"
-                                    v-if="
-                                        $v.formData.$dirty &&
-                                        $v.formData.phone.$invalid
-                                    "
-                                >
-                                    {{ phoneErrorMessage }}
-                                </p>
+                            </div>
+                            <div
+                                class="error"
+                                v-if="
+                                    $v.formData.$dirty &&
+                                    $v.formData.phone.$invalid
+                                "
+                            >
+                                {{ phoneErrorMessage }}
                             </div>
                             <div
                                 class="input input--wd"
@@ -166,7 +165,7 @@
                                         >Omschrijving</span
                                     >
                                 </label>
-                            </div> -->
+                            </div>
                         </div>
                         <button
                             type="submit"

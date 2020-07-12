@@ -59,5 +59,5 @@ export default function (Vue, { router, head, isClient }) {
     }
 
     // Form validation
-    Vue.use(Vuelidate)
+    Vue.use(Vuelidate, { ssr: true })
 }
