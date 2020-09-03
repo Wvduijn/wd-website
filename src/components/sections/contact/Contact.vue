@@ -26,10 +26,11 @@
                         class="contact-form p-5"
                         name="contact-form"
                         method="post"
-                        v-on:submit.prevent="handleSubmit"
+                        @submit.prevent="handleSubmit"
                         action="/success/"
                         data-netlify="true"
                         data-netlify-honeypot="bot-field"
+                        novalidate
                     >
                         <input
                             type="hidden"
@@ -279,12 +280,7 @@ export default {
             this.invalid = !this.$v.formData.$anyDirty
 
             // Check if form isn't empty and doesn't contain any errors
-            if (
-                this.errors === false &&
-                this.formTouched === false &&
-                this.invalid === false
-            ) {
-                console.log('FORMDATA', this.formData)
+            if (!this.errors && !this.formTouched && !this.invalid) {
                 fetch('/', {
                     method: 'POST',
                     headers: {
@@ -296,7 +292,6 @@ export default {
                     }),
                 })
                     .then((response) => {
-                        console.log(response)
                         // show Snackbar with thank you message
                         this.$toasted.success(
                             '&#10004;  Bedankt voor uw bericht! Ik zal z.s.m. reageren.'

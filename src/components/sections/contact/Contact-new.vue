@@ -219,7 +219,6 @@ export default {
         },
         handleSubmit(e) {
             
-            console.log(e);
             // Check if form isn't empty and doesn't contain any errors
            this.$refs.form.validate().then(success => {
             if (!success) {

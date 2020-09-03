@@ -6,7 +6,7 @@ import 'highlight.js/styles/night-owl.css'
 
 // Import default layout so we don't need to import it to every page
 import DefaultLayout from '~/layouts/Default.vue'
-import Vuelidate from 'vuelidate'
+// import Vuelidate from 'vuelidate'
 
 // Font awesome
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -59,5 +59,5 @@ export default function (Vue, { router, head, isClient }) {
     }
 
     // Form validation
-    Vue.use(Vuelidate, { ssr: true })
+    // Vue.use(Vuelidate, { ssr: true })
 }
