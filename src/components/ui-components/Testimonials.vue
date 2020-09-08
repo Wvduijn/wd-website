@@ -96,7 +96,7 @@ export default {
 .carousel {
     &-cell {
         width: 100%; /* full width */
-        height: 300px; /* height of carousel */
+        min-height: 300px; /* height of carousel */
         margin-right: 10px;
 
         &_quote {
