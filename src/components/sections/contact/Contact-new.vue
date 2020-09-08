@@ -283,7 +283,7 @@ h4 {
     letter-spacing: 4px;
 }
 .tel {
-    color: #fff;
+    color: var(--telephone);
     letter-spacing: 4px;
     /* text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
 }

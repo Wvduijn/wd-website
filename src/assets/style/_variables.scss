@@ -8,7 +8,7 @@ body {
     --bg-color: #f3f7f9;
     --bg-color2: #fff;
     --bg-content-color: #fff;
-    --bg-code: #fffbf3;
+    --bg-code: #0f2027;
     --body-color: #2b303a;
     --title-color: #0f2027;
     --link-color: #ee751c;
@@ -25,6 +25,11 @@ body {
     --content-width: 860px;
     --header-height: 80px;
     --radius: 5px;
+    --recent-postsbg: #adcad6;
+    --testimonials-bg: #adcad6;
+    --telephone: #0f2027;
+    --titleborder: #ee751c;
+    --social: #fff;
 
     --main-gradient: linear-gradient(
         180deg,
@@ -61,11 +66,13 @@ body[data-theme='dark'] {
     --bg-color: #0d2538;
     --bg-color2: #0d2538;
     --bg-content-color: #0f2d44;
-    --bg-code: rgba(0, 0, 0, 0.3);
+    --bg-code: #0f2027;
     --border-color: rgba(255, 255, 255, 0.1);
     --body-color: #ced8de;
     --title-color: #fff;
     --link-color: #ee751c;
+    --recent-postsbg: #111;
+    --testimonials-bg: #0d2538;
     --main-gradient-trans: linear-gradient(
         260deg,
         rgba(15, 32, 39, 0.4) 0%,
@@ -78,4 +85,7 @@ body[data-theme='dark'] {
         rgba(32, 58, 67, 1) 50%,
         rgba(44, 83, 100, 1) 100%
     );
+    --telephone: #fff;
+    --titleborder: #fff;
+    --social: #e63020;
 }

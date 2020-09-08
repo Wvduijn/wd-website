@@ -73,7 +73,7 @@ export default {
 
 <style lang="scss" scoped>
 .posts-background {
-    background: #111;
+    background: var(--recent-postsbg);
 }
 .posts-wrapper {
     display: grid;

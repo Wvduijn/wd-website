@@ -19,7 +19,7 @@ export default {
 <style lang="scss" scoped>
 .title-spacer {
     border: 0 solid #e7e6e6;
-    border-color: #ffffff;
+    border-color: var(--titleborder);
     border-top-width: 1px;
     margin-left: auto;
     margin-right: auto;

@@ -123,7 +123,7 @@ $accent: #e63020;
         position: absolute;
         width: 36%;
         /* top: 7px; */
-        left: 19px;
+        left: 20px;
         transition: all $timing ease-out;
     }
 
@@ -148,7 +148,7 @@ $accent: #e63020;
 
         &:hover svg {
             @include transformScale(1.75);
-            color: #fff;
+            color: var(--titleborder);
             background: -webkit-linear-gradient(45deg, $iconColor, $accent);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;

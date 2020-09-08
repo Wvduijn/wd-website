@@ -55,7 +55,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .dark-bg {
-    background: var(--bg-color2);
+    background: var(--testimonials-bg);
 }
 .clients {
     margin: 20px 0;
