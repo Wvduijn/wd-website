@@ -17,7 +17,7 @@
         "gridsome": "^0.7.7",
         "gridsome-plugin-remark-prismjs-all": "^0.3.1",
         "gridsome-plugin-sass-resources-loader": "^0.0.3",
-        "highlight.js": "^9.18.1",
+        "highlight.js": "^10.4.1",
         "markdown-it": "^10.0.0",
         "typeface-roboto": "^0.0.75",
         "vee-validate": "^3.3.7",
