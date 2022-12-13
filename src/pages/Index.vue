@@ -18,7 +18,6 @@
 import Section from '~/components/section/Section.vue'
 import Skills from '~/components/sections/skills/Skills.vue'
 import AboutMe from '~/components/sections/aboutme/AboutMe.vue'
-import Contact from '~/components/sections/contact/Contact.vue'
 import ContactNew from '~/components/sections/contact/Contact-new.vue'
 import Clients from '~/components/sections/testimonials/Clients.vue'
 import RecentPosts from '~/components/sections/recent-posts/RecentPosts.vue'
@@ -27,7 +26,6 @@ export default {
     components: {
         AboutMe,
         Skills,
-        Contact,
         ContactNew,
         Clients,
         RecentPosts,

@@ -19,7 +19,7 @@
                     <span class="title-spacer"></span>
                     <span
                         class="block uppercase font-thin tracking-wider font-bold text-sm"
-                        >websites & webapps met het oog op performance</span
+                        >websites & webapps met het oog op scalability</span
                     >
                 </h1>
             </div>

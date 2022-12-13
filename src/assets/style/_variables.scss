@@ -5,7 +5,9 @@ html {
 
 // Light default theme
 body {
-    --bg-color: #f3f7f9;
+    --bg-color: rgb(243, 247, 249);
+    --bg-color-a: rgba(211, 211, 211, 0.2);
+    --bg-color-about: rgba(255, 255, 255, 0.8);
     --bg-color2: #fff;
     --bg-content-color: #fff;
     --bg-code: #0f2027;
@@ -30,6 +32,7 @@ body {
     --telephone: #0f2027;
     --titleborder: #ee751c;
     --social: #fff;
+    --pingborder: darkcyan;
 
     --main-gradient: linear-gradient(
         180deg,
@@ -63,7 +66,9 @@ body {
 
 // Override variables for Dark theme
 body[data-theme='dark'] {
-    --bg-color: #0d2538;
+    --bg-color: rgb(13, 37, 56);
+    --bg-color-a: rgba(13, 37, 56, 0.2);
+    --bg-color-about: rgba(13, 37, 56, 0.8);
     --bg-color2: #0d2538;
     --bg-content-color: #0f2d44;
     --bg-code: #0f2027;
@@ -88,4 +93,5 @@ body[data-theme='dark'] {
     --telephone: #fff;
     --titleborder: #fff;
     --social: #e63020;
+    --pingborder: darkcyan;
 }

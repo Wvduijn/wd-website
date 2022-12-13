@@ -1,7 +1,11 @@
 <template>
     <div>
         <MenuToggle :open="this.open" @click.native="toggleMenu" />
-        <Menu :open="this.open" :closed="this.closed" />
+        <Menu
+            :open="this.open"
+            :closed="this.closed"
+            @click.native="handleClose"
+        />
     </div>
 </template>
 <script>
@@ -29,9 +33,10 @@ export default {
             } else {
                 this.closed = false
             }
-            console.log('clicked')
-            console.log('Opened', this.open)
-            console.log('Closed', this.closed)
+        },
+        handleClose() {
+            this.open = false
+            console.log('Close the menu when clicked', this.open)
         },
     },
 }

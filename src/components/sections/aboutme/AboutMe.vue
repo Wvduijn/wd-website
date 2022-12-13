@@ -5,7 +5,7 @@
         </template>
 
         <template v-slot:content>
-            <div class="w-full lg:w-2/3 p-10 sm:pb-60">
+            <div class="w-full p-10 rounded-2xl mt-5 content-bg shadow-2xl">
                 <p class="font-black">
                     {{ $static.about.intro }}
                 </p>
@@ -42,6 +42,9 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.content-bg {
+    background: var(--bg-color-about);
+}
 .wd-background {
     background: url('~@/assets/images/willemvanduijn-hero.webp') bottom right
         no-repeat;

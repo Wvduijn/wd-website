@@ -35,7 +35,6 @@
         "@fortawesome/free-brands-svg-icons": "^5.11.2",
         "@fortawesome/free-solid-svg-icons": "^5.11.2",
         "@fortawesome/vue-fontawesome": "^0.1.8",
-        "@fullhuman/postcss-purgecss": "^1.3.0",
         "@vue/cli-plugin-eslint": "^4.4.3",
         "@vue/cli-service": "^4.4.3",
         "@vue/eslint-config-prettier": "^6.0.0",
@@ -45,10 +44,14 @@
         "eslint-plugin-vue": "^6.2.2",
         "gridsome-plugin-manifest": "^0.3.5",
         "gridsome-plugin-service-worker": "^0.1.5",
-        "gridsome-plugin-tailwindcss": "^2.2.26",
-        "node-sass": "^4.12.0",
         "prettier": "^2.0.5",
+        "sass": "^1.54.9",
         "sass-loader": "^8.0.0",
-        "style-resources-loader": "^1.3.3"
+        "style-resources-loader": "^1.3.3",
+        "@tailwindcss/postcss7-compat": "^2.0.2",
+        "autoprefixer": "^9",
+        "gridsome-plugin-tailwindcss": "^4.1.1",
+        "postcss": "^7",
+        "tailwindcss": "npm:@tailwindcss/postcss7-compat"
     }
 }

@@ -1,6 +1,6 @@
 <template>
     <g-link class="logo" to="/">
-        <span class="logo__text">
+        <span>
             <g-image src="~/assets/images/wd.svg" width="70" />
             <!-- &larr; {{ $static.metadata.siteName }} -->
         </span>

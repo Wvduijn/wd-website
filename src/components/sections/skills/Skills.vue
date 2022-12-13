@@ -9,16 +9,13 @@
 
         <template v-slot:content>
             <div class="w-full p-10">
-                <p class="font-black">
-                    {{ $static.skillscontent.intro }}
-                </p>
-                <p>
-                    {{ $static.skillscontent.body }}
-                </p>
+                <div
+                    v-html="$static.skillscontent.introduction"
+                    class="font-black"
+                ></div>
+                <div v-html="$static.skillscontent.body"></div>
 
-                <h3 class="text-center">
-                    U kunt bij mij o.a. terecht voor:
-                </h3>
+                <h3 class="text-center">U kunt bij mij o.a. terecht voor:</h3>
                 <div class="flex flex-wrap mb-4">
                     <div
                         class="w-2/4 md:w-1/4"
@@ -45,7 +42,7 @@
 query {
   skillscontent: contentfulSectionSkills(id:"6snq9TcFb5Yg9xj0XJAfrj"){
   	body
-    intro
+    introduction
     title
     subtitle
     id
@@ -76,6 +73,10 @@ export default {
                 {
                     title: 'Nuxt',
                     imageurl: 'nuxt.png',
+                },
+                {
+                    title: 'NextJS',
+                    imageurl: 'nextjs.png',
                 },
                 {
                     title: 'Gridsome',
@@ -143,6 +144,7 @@ export default {
 .wd-background {
     background: var(--main-gradient);
 }
+
 .showskill-button {
     font-size: 0.8rem;
     border-radius: 10px;

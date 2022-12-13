@@ -9,8 +9,8 @@
 - Contenful for content.
 - Tags support.
 - Dark / Light toggle.
-- CSS variables, SCSS & BEM for styling.
-- 100, 100, 100, 100 score on Google Lighthouse.
+- CSS variables, SCSS & BEM, Tailwind for styling.
+- Nice score on Google Lighthouse.
 
 ## URL
 

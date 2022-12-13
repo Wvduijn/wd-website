@@ -1,6 +1,7 @@
 <template>
     <div :class="{ open: open, closed: closed }">
         <nav>
+            <div>close</div>
             <ul class="menu">
                 <li data-text="Home"><g-link to="/">Home</g-link></li>
                 <li data-text="Blog"><g-link to="/blog">Blog</g-link></li>
@@ -68,7 +69,7 @@ nav {
     top: -100%;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     overflow: hidden;

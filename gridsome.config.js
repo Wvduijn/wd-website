@@ -1,12 +1,11 @@
-// This is where project configuration and plugin options are located.
-// Learn more: https://gridsome.org/docs/config
-
-// Changes here requires a server restart.
-// To restart press CTRL + C in terminal and run `gridsome develop`
+// import tailwind at the top of the file
+const tailwindcss = require('tailwindcss')
 module.exports = {
+    // This is where project configuration and plugin options are located.
+    // Learn more: https://gridsome.org/docs/config
     siteName: 'Willem van Duijn - Front-end Developer',
     siteDescription:
-        'Willem van Duijn, Freelance Front-end Developer gespecialiseerd in Angular, Vue, Nuxt & recent ook webcomponents met StencilJS',
+        'Willem van Duijn, Freelance Front-end Developer gespecialiseerd in Vue, Nuxt, Angular & recent ook webcomponents met StencilJS',
 
     templates: {
         ContentfulBlogPost: [
@@ -23,6 +22,14 @@ module.exports = {
         ],
     },
 
+    css: {
+        loaderOptions: {
+            postcss: {
+                plugins: [tailwindcss],
+            },
+        },
+    },
+
     plugins: [
         // Integrate Contentful
         {
@@ -35,13 +42,25 @@ module.exports = {
                 typename: 'Contentful',
             },
         },
+        // {
+        //     use: 'gridsome-plugin-tailwindcss',
+        //     options: {
+        //         tailwindConfig: './tailwind.config.js',
+        //         shouldPurge: true,
+        //         shouldImport: true,
+        //         shouldTimeTravel: true,
+        //         shouldPurgeUnusedKeyframes: true,
+        //     },
+        // },
         {
             use: 'gridsome-plugin-tailwindcss',
+
+            // these options are optional, as they are copies of the default values...
             options: {
                 tailwindConfig: './tailwind.config.js',
-                shouldPurge: true,
-                shouldImport: true,
-                shouldTimeTravel: true,
+                presetEnvConfig: {},
+                shouldImport: false,
+                shouldTimeTravel: false,
                 shouldPurgeUnusedKeyframes: true,
             },
         },
@@ -100,6 +119,7 @@ module.exports = {
 
     // Extra webpack config
     chainWebpack: (config) => {
+        config.mode('development')
         config.resolve.alias.set('@style', '@/assets/style/')
         config.resolve.alias.set('@images', '@/assets/images/')
         config.resolve.alias.set('@devimages', '@/assets/images/dev-logos/')

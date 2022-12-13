@@ -5,7 +5,7 @@
         </div>
         <div class="break"></div>
         <div class="footer__copyright">
-            © Copyright 2020 &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; Willem van
+            © Copyright 2022 &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; Willem van
             Duijn - Front-end developer &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
             Alle Rechten voorbehouden
         </div>
